@@ -1,44 +1,25 @@
-name: Deploy to Google Cloud VM
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Set up SSH Agent with Passphrase
+      - name: Setup SSH
         env:
-          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}  # Add the passphrase to GitHub Secrets
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          echo "Setting up SSH Agent with passphrase..."
-          eval "$(ssh-agent -s)"
-          echo "${{ secrets.DEPLOY_KEY }}" > /tmp/private_key
-          chmod 600 /tmp/private_key
-          echo "${SSH_PASSPHRASE}" | ssh-add /tmp/private_key
-          rm /tmp/private_key
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan $VM_IP >> ~/.ssh/known_hosts
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/id_rsa
 
-      - name: Deploy to Debian VM
+      - name: Deploy to VM
         env:
-          VM_USER: "cultiveer"
-          VM_IP: "34.31.76.17"
+          VM_USER: cultiveer
+          VM_IP: 34.31.76.17
         run: |
-          echo "Starting Deployment to Debian VM..."
-
-          # Clean up and prepare target directory
-          ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP "
-            sudo rm -rf /var/www/html/* &&
-            sudo mkdir -p /var/www/html &&
-            sudo chown -R $(whoami) /var/www/html
-          "
-
-          # Transfer files to VM
+          ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP "sudo rm -rf /var/www/html/* && sudo mkdir -p /var/www/html && sudo chown -R $(whoami) /var/www/html"
           scp -o StrictHostKeyChecking=no -r ./* $VM_USER@$VM_IP:/var/www/html/
-
-          echo "Deployment Complete!"
