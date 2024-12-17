@@ -28,15 +28,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/client.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 </head>
 <body>
-<h2>Login</h2>
-<form method="post" action="login.php">
-    <label>Username:</label>
-    <input type="text" name="username" required><br>
-    <label>Password:</label>
-    <input type="password" name="password" required><br>
-    <button type="submit">Login</button>
-</form>
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+        <br>
+        <button onclick="window.location.href='register.php'" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; transition: background-color 0.5s ease;" onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#01714d'">Register</button><a href="register.php">Register</a>
+        <a href="#">Forgot Password?</a>
+    </div>
+</div>
+
 </body>
 </html>

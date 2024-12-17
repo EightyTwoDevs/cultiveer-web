@@ -1,0 +1,201 @@
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f6f5f2, #e9e7e2);
+    font-family: var(--thm-font);
+}
+
+.login-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--thm-black);
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #e9e7e2;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: var(--thm-black2);
+    box-sizing: border-box;
+}
+
+.login-card input:focus {
+    border-color: var(--thm-primary);
+    box-shadow: 0 0 5px rgba(247, 195, 95, 0.5);
+}
+
+.login-card button {
+    background: var(--thm-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-card button:hover {
+    background: var(--thm-black);
+    color: #fff;
+}
+
+.login-card a {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--thm-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-card a:hover {
+    color: var(--thm-black);
+}
+
+
+/* Register Page Styles */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f6f5f2, #e9e7e2);
+    font-family: var(--thm-font);
+}
+
+.register-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--thm-black);
+}
+
+.register-card label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: var(--thm-black2);
+    text-align: left;
+}
+
+.register-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px;
+    border: 1px solid #e9e7e2;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: var(--thm-black2);
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+.register-card input:focus {
+    border-color: var(--thm-primary);
+    box-shadow: 0 0 5px rgba(247, 195, 95, 0.5);
+}
+
+.register-card button {
+    background: var(--thm-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.register-card button:hover {
+    background: var(--thm-black);
+    color: #fff;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    background: #f8f9fa;
+    font-family: var(--thm-font, Arial, sans-serif);
+}
+
+.chart-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--thm-black, #333);
+}
+
+.logout-button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 20px;
+    background-color: var(--thm-primary, #f7c35f);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--thm-black, #333);
+    transform: translateY(-2px);
+}
+

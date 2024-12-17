@@ -24,17 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/client.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 </head>
 <body>
-<h2>Register</h2>
-<form method="post" action="register.php">
-    <label>Username:</label>
-    <input type="text" name="username" required><br>
-    <label>Password:</label>
-    <input type="password" name="password" required><br>
-    <label>Device ID:</label>
-    <input type="text" name="device_id" required><br>
-    <button type="submit">Register</button>
-</form>
+<div class="register-container">
+    <div class="register-card">
+        <h2>Register</h2>
+        <form method="post" action="register.php">
+            <label>Username:</label>
+            <input type="text" name="username" required>
+            <label>Password:</label>
+            <input type="password" name="password" required>
+            <label>Device ID:</label>
+            <input type="text" name="device_id" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
