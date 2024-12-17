@@ -18,8 +18,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
         env:
-          SSH_ASKPASS: /bin/echo
           SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+        run: |
+          echo "Setting up SSH Agent with passphrase..."
+          eval "$(ssh-agent -s)"
+          echo "${{ secrets.DEPLOY_KEY }}" > /tmp/private_key
+          chmod 600 /tmp/private_key
+          echo "${SSH_PASSPHRASE}" | ssh-add /tmp/private_key
+          rm /tmp/private_key
 
       - name: Deploy to Debian VM
         env:
