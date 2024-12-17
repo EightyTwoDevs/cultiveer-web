@@ -14,11 +14,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up SSH Agent with Passphrase
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
         env:
-          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}  # Add the passphrase to GitHub Secrets
         run: |
           echo "Setting up SSH Agent with passphrase..."
           eval "$(ssh-agent -s)"
