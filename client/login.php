@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="password" placeholder="Password" required />
             <button type="submit">Login</button>
         </form>
+        <br>
+        <button onclick="window.location.href='register.php'" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; transition: background-color 0.5s ease;" onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#01714d'">Register</button><a href="register.php">Register</a>
         <a href="#">Forgot Password?</a>
     </div>
 </div>
