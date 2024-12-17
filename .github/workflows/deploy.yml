@@ -13,10 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up SSH Agent
+      - name: Set up SSH Agent with Passphrase
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+        env:
+          SSH_ASKPASS: /bin/echo
+          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
 
       - name: Deploy to Debian VM
         env:
@@ -24,15 +27,15 @@ jobs:
           VM_IP: "34.31.76.17"
         run: |
           echo "Starting Deployment to Debian VM..."
-          
+
           # Clean up and prepare target directory
           ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP "
             sudo rm -rf /var/www/html/* &&
             sudo mkdir -p /var/www/html &&
             sudo chown -R $(whoami) /var/www/html
           "
-          
+
           # Transfer files to VM
           scp -o StrictHostKeyChecking=no -r ./* $VM_USER@$VM_IP:/var/www/html/
-          
+
           echo "Deployment Complete!"
