@@ -1797,13 +1797,13 @@
 :root {
   --thm-font: "Poppins", sans-serif;
   --heading-font: "Poppins", sans-serif;
-  --special-font: "Handlee", cursive;
+  --special-font: "Poppins", cursive;
   --thm-color: #6e7673;
   --thm-color-rgb: 110, 118, 115;
   --thm-base: #49a760;
   --thm-base-rgb: 73, 167, 96;
-  --thm-primary: #f7c35f;
-  --thm-primary-rgb: 247, 195, 95;
+  --thm-primary: #40ac1c;
+  --thm-primary-rgb: 64, 172, 28;
   --thm-secondary: #ed4b4b;
   --thm-secondary-rgb: 237, 75, 75;
   --thm-special: #5366c2;
