@@ -1805,9 +1805,9 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --thm-font: "Inter", sans-serif;
-  --heading-font: "Inter", sans-serif;
-  --special-font: "Handlee", cursive;
+  --thm-font: "Poppins", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+  --special-font: "Poppins", cursive;
   --thm-color: #6e7673;
   --thm-color-rgb: 110, 118, 115;
   --thm-base: #49a760;
