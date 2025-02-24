@@ -8612,40 +8612,117 @@ a:hover {
 /* =========================
    ABOUT SECTION
 ========================= */
+/* About Section Styling */
 .about-section {
   padding: 80px 0;
-  background: #f0f0f0;
-}
-.about-features {
-  list-style: none;
-  padding-left: 0;
-}
-.about-features li {
-  margin-bottom: 10px;
+  background-color: #f6f6f6;
 }
 
-/* phone image */
-.phone-graphic {
+/* Left Content (Text) */
+.about-text {
+  text-align: left;
+}
+
+
+
+.section-icon {
+  width: 30px; /* Increase icon size */
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: 2rem; /* Increase title size */
+  font-weight: 800; /* Make it bolder */
+  color: #000; /* Ensure it's dark */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-text p {
+  font-size: 1rem; /* Increase paragraph size */
+  color: #9a9999;
+  font-weight: 600;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.about-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem; /* Increase text size */
+  font-weight: 600; /* Make text bolder */
+  margin-bottom: -3px;
+  color: rgba(35, 135, 0, 0.84);
+}
+
+.about-features img {
+  width: 20px; /* Increase icon size */
+  height: 20px;
+  margin-right: 12px;
+}
+
+/* Right Content (Phone Image) */
+.about-phone-wrapper {
+  position: relative;
   text-align: center;
 }
-.phone-image {
-  max-width: 300px;
-  height: auto;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  border-radius: 20px;
+
+
+.about-phone {
+  width: 100%;
+  max-width: 450px; /* Increase phone size */
+  transform: rotate(10deg);
+  transition: transform 0.3s ease-in-out;
 }
+
+/* Hover Effect */
+.about-phone:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-phone {
+      max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-phone {
+      max-width: 300px;
+      transform: rotate(0deg); /* Reset rotation on small screens */
+  }
+}
+
 
 /* =========================
    PROJECTS TILES
 ========================= */
 .projects-section {
-  padding: 60px 0;
+  padding: 40px 0;
   background-color: #fdfdfd;
 }
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .project-tile {
   border: 2px solid #49a760;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin-bottom: 30px;
