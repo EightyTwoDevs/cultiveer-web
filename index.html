@@ -250,15 +250,6 @@
 Cultiveer, including prototype developments and upcoming 
 features
           </p>
-    <!-- <section id="project-updates" class="project-updates-section">
-      <div class="container scroll-animate">
-        <h2 class="updates-title">
-          <img src="assets/images/loader.png" alt="Icon" class="updates-icon"/>
-          Project Updates
-        </h2>
-        <p class="updates-subtext">
-          Stay informed with the latest progress and milestones of Cultiveer...
-        </p> -->
 
         <div class="video-wrapper">
           <!-- Reuse your existing video link or placeholder -->
@@ -468,33 +459,65 @@ Discover how Cultiveer is driving the future of farming.
     <!-- =============================
          Blog / Latest Updates
        ============================= -->
-    <section id="news" class="blog-home-two scroll-animate">
-      <div class="container">
-        <div class="row top-row">
-          <div class="col-lg-6">
-            <h2 class="blog-title">Latest Updates & Insights <br> from Cultiveer</h2>
-            <p class="blog-subtext">Explore how Cultiveer is revolutionizing agriculture ...</p>
+       <section id="news" class="blog-home-two scroll-animate">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="blog-title">
+                <img src="assets/images/loader.png" alt="Icon" class="blog-icon" />
+                Latest Updates & Insights <br> from Cultiveer
+              </h2>
+              <p class="blog-subtext">
+                Explore how Cultiveer is revolutionizing agriculture with cutting-edge 
+                IoT solutions, sustainable practices, and innovative approaches to farming.              </p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <!-- 3 placeholders cards -->
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__image">
-                <div class="blog-placeholder"></div>
-                <!-- or <img src="assets/images/blog/blog4.jpg" ...> -->
-              </div>
-              <div class="blog-card__content">
-                <h4>IoT Solutions for Precision Farming</h4>
-                <a href="#" class="thm-btn">Read More</a>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="thm-swiper__slider swiper-container" data-swiper-options='{
+                "slidesPerView": 3,
+                "spaceBetween": 30,
+                "loop": true,
+                "autoplay": { "delay": 4000 },
+                "pagination": {
+                  "el": ".innovative-pagination",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "0": { "slidesPerView": 1 },
+                  "768": { "slidesPerView": 2 },
+                  "992": { "slidesPerView": 3 }
+                }
+              }'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="innovative-pagination swiper-pagination"></div>
               </div>
             </div>
           </div>
-          <!-- ... Repeat for more cards -->
         </div>
-      </div>
-    </section>
-
+      </section>
+      
     <!-- =============================
          Footer / CTA
        ============================= -->
