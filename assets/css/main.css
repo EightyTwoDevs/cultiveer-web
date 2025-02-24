@@ -8706,34 +8706,118 @@ a:hover {
 /* =========================
    PROJECTS TILES
 ========================= */
+/* =========================
+   PROJECTS SECTION
+========================= */
 .projects-section {
   padding: 40px 0;
   background-color: #fdfdfd;
+
 }
+
+/* Section Title */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  color: #000;
+  display: flex;
+  
+  
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+/* Icon for Section Title */
+.section-title .section-icon {
+  width: 42px;
+  height: 42px;
+}
+
+/* Row: Centers both tiles side by side */
+.projects-row {
+  display: flex; 
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns vertically */
+  gap:0px; /* Spacing between tiles */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  max-width: 500px; /* Prevents excessive stretching */
+  margin: 0 auto; /* Centers the row */
+}
+
+/* Project Tile Styling */
+.project-tile {
+  border: 2px solid #49a760;
+  border-radius: 12px;
+  padding: 30px;  
+  width: 75%; /* Adjusted for even spacing */
+  max-width: 400px; /* Prevents excessive stretching */
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .projects-row {
+      flex-direction: row; /* Keeps them side by side */
+      justify-content: center;
+  }
+
+  .project-tile {
+      width: 48%; /* Adjust width for medium screens */
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-row {
+      flex-direction: column; /* Stack vertically on small screens */
+      align-items: center;
+  }
+
+  .project-tile {
+      width: 90%; /* Increase width for smaller screens */
+      max-width: 400px;
+  }
+}
+
+/* Project Card Title */
+.project-tile-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Project Card List */
+.project-tile-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* List Items */
+.project-tile-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
   display: flex;
   align-items: center;
 }
 
-.project-tile {
-  border: 2px solid #49a760;
-  border-radius: 12px;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-}
-.project-tile h4 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-.project-tile ul {
-  list-style: disc;
-  padding-left: 20px;
+/* Bullet Styling */
+.project-tile-list li::before {
+  content: "•";
+  color: #4CAF50;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 /* =========================
@@ -8748,6 +8832,13 @@ a:hover {
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
+}
+.phone-image{
+  width: 150%;
+  max-width: 400px;
+  height: auto;
+  /* box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border-radius: 8px; */
 }
 .advantages-content h3 {
   font-size: 1.5rem;
