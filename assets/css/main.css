@@ -9000,40 +9000,97 @@ a:hover {
   }
 }
 
-/* =========================
+/* =============================
    SMART POT SECTION
-========================= */
+============================= */
 .smart-pot-section {
   position: relative;
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: #f9f9f9;
 }
+
+/* Initial State: Hidden */
+.smart-pot-title,
+.smart-pot-desc {
+  opacity: 0;
+  transform: translateY(30px); /* Start slightly below */
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s; /* Delayed fade-in effect */
+}
+
+/* ✅ When Scrolled into View, Start Animation */
+.smart-pot-section:target .smart-pot-title,
+.smart-pot-section:target .smart-pot-desc {
+  animation-delay: 0s; /* Reset delay */
+}
+
+/* Keyframes for Fade-In Effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Wrapper (Remains Static) */
 .smart-pot-image-wrapper {
   position: relative;
-  text-align: center;
+  text-align: left;
 }
+
+/* Image Styling (No Animation) */
 .smart-pot-img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 550px;
+  width: 80%;
   height: auto;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  border-radius: 8px;
 }
+
+/* Prototype Label (Static) */
 .smart-pot-proto-label {
   position: absolute;
-  top: 10%;
-  right: 0;
+  top: 8%;
+  right: 0%;
   font-size: 0.9rem;
   color: #999;
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-#smart-pot-img-col.scrolled .smart-pot-proto-label {
   opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.3s;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .row.align-items-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .smart-pot-title {
+    justify-content: center;
+  }
+
+  .smart-pot-desc {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .smart-pot-image-wrapper {
+    text-align: center;
+  }
+
+  .smart-pot-img {
+    max-width: 400px;
+  }
+
+  .smart-pot-proto-label {
+    top: 5%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 
 /* =========================
    PROJECT UPDATES (VIDEO)
