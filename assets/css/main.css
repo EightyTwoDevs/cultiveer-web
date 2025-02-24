@@ -9009,54 +9009,45 @@ a:hover {
   background-color: #f9f9f9;
 }
 
-/* Initial State: Hidden */
-.smart-pot-title,
+/* Smart Pot Title */
+.smart-pot-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Smart Pot Description */
 .smart-pot-desc {
-  opacity: 0;
-  transform: translateY(30px); /* Start slightly below */
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s; /* Delayed fade-in effect */
+  font-size: 1rem;
+  color: #666;
+  max-width: 450px;
 }
 
-/* ✅ When Scrolled into View, Start Animation */
-.smart-pot-section:target .smart-pot-title,
-.smart-pot-section:target .smart-pot-desc {
-  animation-delay: 0s; /* Reset delay */
-}
-
-/* Keyframes for Fade-In Effect */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Image Wrapper (Remains Static) */
+/* Image Wrapper */
 .smart-pot-image-wrapper {
   position: relative;
   text-align: left;
 }
 
-/* Image Styling (No Animation) */
+/* Image Styling */
 .smart-pot-img {
   max-width: 550px;
   width: 80%;
   height: auto;
 }
 
-/* Prototype Label (Static) */
+/* Prototype Label */
 .smart-pot-proto-label {
   position: absolute;
   top: 8%;
   right: 0%;
+  
   font-size: 0.9rem;
   color: #999;
-  opacity: 1;
 }
 
 /* Responsive Adjustments */
@@ -9090,7 +9081,6 @@ a:hover {
     transform: translateX(-50%);
   }
 }
-
 
 /* =========================
    PROJECT UPDATES (VIDEO)
@@ -9127,55 +9117,86 @@ a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   IOT INNOVATION (ODOMETER)
-========================= */
+/* =============================
+IOT INNOVATION SECTION
+============================= */
 .iot-innovation-section {
-  background-color: #f9f9f9;
-  padding: 80px 0;
+background-color: #f9f9f9;
+padding: 100px 0;
 }
+
+/* IoT Title */
 .iot-title {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+display: flex;
+align-items: center;
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 15px;
+color: #000;
 }
+
+/* IoT Icon */
 .iot-icon {
-  width: 28px;
-  margin-right: 8px;
+width: 32px;
+margin-right: 10px;
 }
+
+/* Subtitle */
 .iot-subtext {
-  font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 30px;
+font-size: 1rem;
+color: #777;
+max-width: 600px;
+margin-bottom: 30px;
 }
+
+/* Features List */
 .iot-features-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
+list-style: none;
+padding: 0;
+margin-bottom: 10px;
 }
+
 .iot-features-list li {
-  margin-bottom: 10px;
+display: flex;
+align-items: center;
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 0px;
 }
+
+/* Feature Icons */
+.iot-icon-list {
+width: 20px;
+margin-right: 10px;
+}
+
+/* Counter Section */
 .iot-counter-wrap {
-  margin-top: 40px;
+margin-top: 50px;
+
 }
+
 .iot-counter-wrap h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #49a760;
-  margin-bottom: 5px;
+display: flex;
+align-items: center;
+font-size: 2.5rem;
+font-weight: 700;
+color: #49a760;
+margin-bottom: 5px;
 }
+
 .iot-counter-wrap p {
-  color: #666;
-  font-size: 1rem;
+color: #666;
+font-size: 1rem;
+margin-top: -10px;
 }
+
 /* Odometer animations (the library handles the digits) */
 .odometer {
   display: inline-block;
   font-size: 2rem;
 }
+
 
 /* =========================
    TEAM SECTION (SLIDER)
@@ -9309,15 +9330,17 @@ a:hover {
 .empower-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  color: #000;
 }
 .empower-subtext {
   color: #666;
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
 }
 .empower-btn {
   border: 2px solid #49a760;
