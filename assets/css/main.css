@@ -8702,15 +8702,11 @@ a:hover {
   }
 }
 
-
-/* =========================
-   PROJECTS TILES
-========================= */
 /* =========================
    PROJECTS SECTION
 ========================= */
 .projects-section {
-  padding: 40px 0;
+  padding: 40px 0px;
   background-color: #fdfdfd;
 
 }
@@ -8721,16 +8717,13 @@ a:hover {
   font-weight: 700;
   color: #000;
   display: flex;
-  
-  
-  gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px; 
 }
 
 /* Icon for Section Title */
 .section-title .section-icon {
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Row: Centers both tiles side by side */
@@ -9092,7 +9085,8 @@ a:hover {
   padding: 100px 0;
 }
 .updates-icon{
-  width: 32px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 /* Title Styling */
@@ -9198,7 +9192,8 @@ color: #000;
 
 /* IoT Icon */
 .iot-icon {
-width: 32px;
+width: 30px;
+height: 30px;
 margin-right: 10px;
 }
 
@@ -9343,12 +9338,13 @@ margin-top: -10px;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
-  display: inline-flex;
-  align-items: center;
+  text-align: left;
+  color: #000;
+  
 }
 .innovative-icon {
-  width: 28px;
-  height: auto;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 .solution-card {
@@ -9448,8 +9444,8 @@ margin-top: -10px;
 }
 
 .blog-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
