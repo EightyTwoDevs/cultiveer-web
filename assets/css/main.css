@@ -27,6 +27,16 @@
 /*--------------------------------------------------------------
 # Utility
 --------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -8454,3 +8464,675 @@ h6 {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+/* =========================
+   RESETS & GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: #49a760;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+}
+
+/* Preloader, if needed */
+.preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   HEADER & NAV
+========================= */
+.main-header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.main-menu .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-box .site-logo {
+  height: 50px;
+}
+.main-menu__list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.main-menu__list li a {
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.main-menu__list li a:hover {
+  background: #f0f0f0;
+}
+.login-btn {
+  border: 2px solid #49a760;
+  background: transparent;
+  padding: 8px 16px;
+  color: #49a760;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.login-btn:hover {
+  background: #49a760;
+  color: #fff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+  position: relative;
+  padding: 120px 0 100px;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin-top: 70px; /* offset for fixed header */
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hero-subtext {
+  font-size: 1.25rem;
+  color: #888;
+  margin-bottom: 40px;
+}
+.explore-btn {
+  display: inline-block;
+  border: 2px solid #49a760;
+  background: transparent;
+  color: #49a760;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+.explore-btn:hover {
+  background: #49a760;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+/* hero icons */
+.hero-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.hero-icon-1 {
+  top: 30%;
+  left: 15%;
+}
+.hero-icon-2 {
+  top: 20%;
+  right: 15%;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-animate.scrolled {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+  padding: 80px 0;
+  background: #f0f0f0;
+}
+.about-features {
+  list-style: none;
+  padding-left: 0;
+}
+.about-features li {
+  margin-bottom: 10px;
+}
+
+/* phone image */
+.phone-graphic {
+  text-align: center;
+}
+.phone-image {
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+/* =========================
+   PROJECTS TILES
+========================= */
+.projects-section {
+  padding: 60px 0;
+  background-color: #fdfdfd;
+}
+.project-tile {
+  border: 2px solid #49a760;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+.project-tile h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.project-tile ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* =========================
+   ADVANTAGES SECTION
+========================= */
+.advantages-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: #f4f4f4;
+}
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.advantages-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.advantages-list {
+  list-style: none;
+  padding-left: 0;
+}
+.advantages-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.advantage-icon {
+  width: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* =========================
+   SMART POT SECTION
+========================= */
+.smart-pot-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+.smart-pot-image-wrapper {
+  position: relative;
+  text-align: center;
+}
+.smart-pot-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+.smart-pot-proto-label {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  font-size: 0.9rem;
+  color: #999;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+#smart-pot-img-col.scrolled .smart-pot-proto-label {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* =========================
+   PROJECT UPDATES (VIDEO)
+========================= */
+.project-updates-section {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+.updates-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.updates-subtext {
+  color: #777;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 56.25%;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   IOT INNOVATION (ODOMETER)
+========================= */
+.iot-innovation-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+.iot-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.iot-icon {
+  width: 28px;
+  margin-right: 8px;
+}
+.iot-subtext {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+.iot-features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.iot-features-list li {
+  margin-bottom: 10px;
+}
+.iot-counter-wrap {
+  margin-top: 40px;
+}
+.iot-counter-wrap h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #49a760;
+  margin-bottom: 5px;
+}
+.iot-counter-wrap p {
+  color: #666;
+  font-size: 1rem;
+}
+/* Odometer animations (the library handles the digits) */
+.odometer {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+/* =========================
+   TEAM SECTION (SLIDER)
+========================= */
+.team-section {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+.team-info .team-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.team-info .team-icon {
+  width: 28px;
+  margin-right: 10px;
+}
+.team-description {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+.team-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.team-nav i {
+  font-size: 1.5rem;
+  color: #49a760;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.team-nav i:hover {
+  color: #333;
+}
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.team-card:hover {
+  transform: translateY(-4px);
+}
+.team-card__image {
+  margin-bottom: 15px;
+}
+.team-placeholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 20px;
+  background: #ccc;
+}
+.team-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.team-role {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* =========================
+   INNOVATIVE SOLUTIONS
+========================= */
+.innovative-solutions-section {
+  background: #f5f5f5;
+  padding: 80px 0;
+}
+.innovative-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+.innovative-icon {
+  width: 28px;
+  height: auto;
+  margin-right: 10px;
+}
+.solution-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.solution-card:hover {
+  transform: translateY(-4px);
+}
+.solution-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  border: 2px solid #49a760;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.solution-readmore {
+  border: 2px solid #49a760;
+  color: #49a760;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.solution-readmore:hover {
+  background: #49a760;
+  color: #fff;
+}
+
+/* =========================
+   CTA: Empower Farmers ...
+========================= */
+.empower-farmers-section {
+  background: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.empower-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.empower-subtext {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.empower-btn {
+  border: 2px solid #49a760;
+  color: #49a760;
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.empower-btn:hover {
+  background: #49a760;
+  color: #fff;
+}
+.empower-logos {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.partner-logo {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s;
+}
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   BLOG HOME (NEWS)
+========================= */
+.blog-home-two {
+  background: #f9f9f9;
+  padding: 60px 0;
+}
+.blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.blog-subtext {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+.blog-card__image .blog-placeholder {
+  width: 100%;
+  height: 180px;
+  background: #ccc;
+  border-radius: 12px 12px 0 0;
+}
+.blog-card__content {
+  padding: 15px 20px;
+}
+.blog-card__content h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   CTA Section Jarallax
+========================= */
+.call-to-action {
+  position: relative;
+  padding: 60px 0;
+  background: #f0f0f0;
+  text-align: center;
+}
+.call-to-action h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.call-to-action p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+.cta-btn {
+  border: 2px solid #49a760;
+  color: #49a760;
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.cta-btn:hover {
+  background: #49a760;
+  color: #fff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background: #f9f9f9;
+  padding: 40px 0;
+}
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+.footer-email-wrap {
+  display: flex;
+  border: 2px solid #49a760;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.footer-email-wrap input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+.footer-email-wrap button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  color: #49a760;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.footer-email-wrap button:hover {
+  background: #49a760;
+  color: #fff;
+}
+.bottom-footer {
+  background: #fff;
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.bottom-footer__links a {
+  margin-left: 15px;
+  color: #666;
+  transition: color 0.3s;
+}
+.bottom-footer__links a:hover {
+  color: #49a760;
+}
+
+/* placeholders in footer */
+.footer-post-placeholder {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 100px 20px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .phone-image {
+    max-width: 220px;
+  }
+  .smart-pot-img {
+    max-width: 280px;
+  }
+  /* etc. adjust as needed */
+}
+

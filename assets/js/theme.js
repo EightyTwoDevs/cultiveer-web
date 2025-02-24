@@ -334,3 +334,84 @@
     }
   });
 })(jQuery);
+
+
+(function ($) {
+  "use strict";
+
+  /* Existing code from your theme.js */
+  if ($(".scroll-to-target").length) {
+    // ...
+  }
+  if ($(".contact-form-validated").length) {
+    // ...
+  }
+  // etc., from your existing code
+
+  // Example: Intersection Observer for .scroll-animate (optional)
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollElems = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scrolled');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElems.forEach(elem => observer.observe(elem));
+  });
+
+  // existing window load event
+  $(window).on("load", function () {
+    if ($(".preloader").length) {
+      $(".preloader").fadeOut();
+    }
+
+    // swiper slider
+    const swiperElm = document.querySelectorAll(".thm-swiper__slider");
+    swiperElm.forEach(function (swiperelm) {
+      const swiperOptions = JSON.parse(swiperelm.dataset.swiperOptions);
+      let thmSwiperSlider = new Swiper(swiperelm, swiperOptions);
+    });
+
+    if ($("#testimonials-one__thumb").length) {
+      // ...
+    }
+
+    if ($(".circle-progress").length) {
+      $(".circle-progress").appear(function () {
+        let circleProgress = $(".circle-progress");
+        circleProgress.each(function () {
+          let progress = $(this);
+          let progressOptions = progress.data("options");
+          progress.circleProgress(progressOptions);
+        });
+      });
+    }
+  });
+
+  // window scroll
+  $(window).on("scroll", function () {
+    if ($(".stricked-menu").length) {
+      var headerScrollPos = 130;
+      var stricky = $(".stricked-menu");
+      if ($(window).scrollTop() > headerScrollPos) {
+        stricky.addClass("stricky-fixed");
+      } else if ($(this).scrollTop() <= headerScrollPos) {
+        stricky.removeClass("stricky-fixed");
+      }
+    }
+    if ($(".scroll-to-top").length) {
+      var strickyScrollPos = 100;
+      if ($(window).scrollTop() > strickyScrollPos) {
+        $(".scroll-to-top").fadeIn(500);
+      } else if ($(this).scrollTop() <= strickyScrollPos) {
+        $(".scroll-to-top").fadeOut(500);
+      }
+    }
+  });
+
+})(jQuery);
+
