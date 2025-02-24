@@ -9023,8 +9023,10 @@ a:hover {
 /* Smart Pot Description */
 .smart-pot-desc {
   font-size: 1rem;
-  color: #666;
+  color: #a29f9f;
   max-width: 450px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 /* Image Wrapper */
@@ -9082,39 +9084,98 @@ a:hover {
   }
 }
 
-/* =========================
-   PROJECT UPDATES (VIDEO)
-========================= */
+/* =============================
+   PROJECT UPDATES SECTION
+============================= */
 .project-updates-section {
   background: #f9f9f9;
-  padding: 80px 0;
+  padding: 100px 0;
 }
+.updates-icon{
+  width: 32px;
+  margin-right: 10px;
+}
+/* Title Styling */
 .updates-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  gap: 10px;
+  color: #000;
 }
+
+/* Subtitle Styling */
 .updates-subtext {
-  color: #777;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  color: #a29f9f;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 40px;
   max-width: 600px;
+  line-height: 1.6;
 }
+
+/* Video Placeholder */
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  height: 400px;
+  background-color: #f2f2f2;
   margin: 0 auto;
-  padding-top: 56.25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Video Container */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Adjust based on your design */
+  height: 400px; /* Ensures it maintains a box shape */
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Video iframe Styling */
 .video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  width: 100%;  /* Ensure it stretches */
+  height: 100%; /* Ensure it fills the container */
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.video-placeholder {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .updates-title {
+    font-size: 1.8rem;
+  }
+
+  .updates-subtext {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .video-wrapper {
+    height: 300px;
+  }
 }
 
 /* =============================
@@ -9144,9 +9205,11 @@ margin-right: 10px;
 /* Subtitle */
 .iot-subtext {
 font-size: 1rem;
-color: #777;
+color: #a29f9f;
 max-width: 600px;
 margin-bottom: 30px;
+font-weight: bold;
+line-height: 1.5;
 }
 
 /* Features List */
@@ -9186,8 +9249,9 @@ margin-bottom: 5px;
 }
 
 .iot-counter-wrap p {
-color: #666;
+color: #a29f9f;
 font-size: 1rem;
+font-weight: bold;
 margin-top: -10px;
 }
 
@@ -9334,8 +9398,10 @@ margin-top: -10px;
   color: #000;
 }
 .empower-subtext {
-  color: #666;
+  color: #a29f9f;
   font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.6;
   margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
