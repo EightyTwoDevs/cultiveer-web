@@ -8820,44 +8820,184 @@ a:hover {
   margin-right: 10px;
 }
 
-/* =========================
+
+/* =============================
    ADVANTAGES SECTION
-========================= */
+============================= */
 .advantages-section {
   position: relative;
   padding: 80px 0;
   background-color: #f4f4f4;
 }
-.phone-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-.phone-image{
-  width: 150%;
-  max-width: 400px;
-  height: auto;
-  /* box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  border-radius: 8px; */
-}
-.advantages-content h3 {
-  font-size: 1.5rem;
+
+.section-title {
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 200px;
+  margin-bottom: 50px;
 }
+
+/* Layout Wrapper */
+.advantages-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Farmers' & Urban Users' Content */
+.advantages-block {
+  width: 30%;
+  text-align: left;
+}
+
+/* Farmers (Align Left) */
+.advantages-block.left {
+  text-align: left;
+  color: black;
+}
+
+/* Urban Users (Align Right) */
+.advantages-block.right {
+  text-align: left;
+  color: black;
+  margin-top: 280px;
+}
+
+/* Title Styling */
+.advantages-block h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0px;
+  color: rgb(171, 169, 169);
+}
+
+/* List Styling */
 .advantages-list {
   list-style: none;
   padding-left: 0;
+  margin-top: 0px;
 }
+
 .advantages-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600;
 }
+
+/* Icon Styling */
 .advantage-icon {
-  width: 32px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+/* Center Phone */
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 75%;
+  min-width: 300px;
+}
+
+/* Phone Image */
+.phone-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Arrows */
+.advantage-arrow {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Left Arrow */
+.arrow-left {
+  left: -140px;
+  top: 5%;
+  width: 350px;
+  transform: translateX(-10px); /* Initial position */
+}
+
+/* Right Arrow */
+.arrow-right {
+  right: -140px;
+  top: 5%;
+  width: 350px;
+  transform: translateX(10px); /* Initial position */
+}
+
+/* Hover effect */
+.advantage-arrow:hover {
+  transform: scale(1.2) rotate(5deg); /* Slight rotation and scale effect */
+  opacity: 0.9;
+}
+
+/* Left Arrow Hover - Moves slightly left */
+.arrow-left:hover {
+  transform: translateX(-20px) scale(1.2) rotate(-5deg);
+}
+
+/* Right Arrow Hover - Moves slightly right */
+.arrow-right:hover {
+  transform: translateX(20px) scale(1.2) rotate(5deg);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+  .advantages-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .advantages-block {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .advantages-block.left,
+  .advantages-block.right {
+    text-align: center;
+  }
+
+  .advantages-list li {
+    justify-content: center;
+  }
+
+  .phone-wrapper {
+    width: 70%;
+    margin-bottom: 40px;
+  }
+
+  .advantage-arrow {
+    width: 100px;
+  }
+
+  .arrow-left {
+    left: -40px;
+    top: 10%;
+  }
+
+  .arrow-right {
+    right: -40px;
+    top: 10%;
+  }
 }
 
 /* =========================
