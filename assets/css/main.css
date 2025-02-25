@@ -9432,18 +9432,6 @@ margin-top: -10px;
   border-radius: 12px;
   margin-bottom: 15px;
 }
-.solution-readmore {
-  border: 2px solid #49a760;
-  color: #49a760;
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.solution-readmore:hover {
-  background: #49a760;
-  color: #fff;
-}
 
 /* =========================
    CTA: Empower Farmers ...
