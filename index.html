@@ -303,71 +303,97 @@ features
         </div>
       </section>
 
-    <!-- =============================
-         Team Visionaries (Slider)
-       ============================= -->
-    <section id="team-visionaries" class="team-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 team-info scroll-animate">
-            <h2 class="team-title">
-              <img src="assets/images/loader.png" alt="leaf" class="team-icon" />
-              The Visionaries Behind Cultiveer
-            </h2>
-            <p class="team-description">
-              Our team of innovators...
-            </p>
-            <div class="team-nav">
-              <div class="swiper-button-prev" id="team-swiper-button-prev">
-                <i class="fa fa-arrow-left"></i>
+<!-- =============================
+         Team Section
+============================= -->
+<section class="team-one">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-5">
+              <div class="team-one__content">
+                  <div class="block-title">
+                      <img src="assets/images/loader.png" alt="Icon" class="team-icon">
+                      <p>MEET THE TEAM</p>
+                      <h2>The Visionaries Behind Cultiveer</h2>
+                  </div>
+                  <p class="team-one__summary">
+                    Our team of passionate second-year undergraduates in software engineering is dedicated to revolutionizing agriculture by integrating technology and sustainability. Together, we’re shaping a smarter future for farming through innovation and research.                  </p>
+
+                  <!-- Swiper Navigation Buttons -->
+                  <div class="team-one__nav">
+                      <div class="swiper-button-prev" id="team-swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                      <div class="swiper-button-next" id="team-swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                  </div>
               </div>
-              <div class="swiper-button-next" id="team-swiper-button-next">
-                <i class="fa fa-arrow-right"></i>
-              </div>
-            </div>
           </div>
-          <!-- Slider right col -->
+
+          <!-- Right Team Members - Swiper -->
           <div class="col-lg-7">
-            <div class="thm-swiper__slider swiper-container" data-swiper-options='{
-              "slidesPerView": 2,
-              "spaceBetween": 30,
-              "navigation": {
-                "nextEl": "#team-swiper-button-next",
-                "prevEl": "#team-swiper-button-prev"
-              },
-              "breakpoints": {
-                "0": { "slidesPerView": 1 },
-                "768": { "slidesPerView": 2 }
-              }
-            }'>
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                  <div class="team-card">
-                    <div class="team-card__image">
-                      <div class="team-placeholder"></div>
-                    </div>
-                    <h4 class="team-name">Senura Naranwala</h4>
-                    <p class="team-role">Team Lead</p>
+              <div class="swiper team-swiper">
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide">
+                          <div class="row team-cards">
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/team-1-1.png" alt="Senura Naranwala">
+                                      <h3>Senura Naranwala</h3>
+                                      <p>Team Lead & Project Manager</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/leyana.png" alt="Leyana Dabare">
+                                      <h3>Leyana Dabare</h3>
+                                      <p>UI/UX Designer & Marketing</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/adithya.png" alt="Adithya Kalhara">
+                                      <h3>Adithya Kalhara</h3>
+                                      <p>Backend Developer</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                          <div class="row team-cards">
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/thedas.png" alt="Thedas Gunawardhana">
+                                      <h3>Thedas Gunawardhana</h3>
+                                      <p>Database Specialist</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/raaidha.png" alt="Raaidha Razik">
+                                      <h3>Raaidha Razik</h3>
+                                      <p>Machine Learning Engineer</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/yathusiga.png" alt="Yathishiga Sivakanthan">
+                                      <h3>Yathishiga Sivakanthan</h3>
+                                      <p>IoT Device Engineer</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                  <div class="team-card">
-                    <div class="team-card__image">
-                      <div class="team-placeholder"></div>
-                    </div>
-                    <h4 class="team-name">Leyana Dabare</h4>
-                    <p class="team-role">UI/UX Designer</p>
-                  </div>
-                </div>
-                <!-- More slides as needed -->
-              </div><!-- /.swiper-wrapper -->
-            </div><!-- /.thm-swiper__slider -->
+
+                  <!-- Pagination -->
+                  <div class="swiper-pagination"></div>
+              </div>
           </div>
-        </div>
       </div>
-    </section>
+  </div>
+</section>
 
     <!-- =============================
          Innovative Farming Solutions
