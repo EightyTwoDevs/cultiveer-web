@@ -9174,58 +9174,86 @@ a:hover {
 /* =============================
 IOT INNOVATION SECTION
 ============================= */
-/* Section Background */
-.innovative-solutions-section {
-  background-color: #f9f9f9;
-  padding: 100px 0;
+.iot-innovation-section {
+background-color: #f9f9f9;
+padding: 100px 0;
 }
 
-/* Title Styling */
-.innovative-title {
-  display: flex;
-  align-items: center;
+/* IoT Title */
+.iot-title {
+display: flex;
+align-items: center;
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 15px;
+color: #000;
+}
+
+/* IoT Icon */
+.iot-icon {
+width: 30px;
+height: 30px;
+margin-right: 10px;
+}
+
+/* Subtitle */
+.iot-subtext {
+font-size: 1rem;
+color: #a29f9f;
+max-width: 600px;
+margin-bottom: 30px;
+font-weight: bold;
+line-height: 1.5;
+}
+
+/* Features List */
+.iot-features-list {
+list-style: none;
+padding: 0;
+margin-bottom: 10px;
+}
+
+.iot-features-list li {
+display: flex;
+align-items: center;
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 0px;
+}
+
+/* Feature Icons */
+.iot-icon-list {
+width: 20px;
+margin-right: 10px;
+}
+
+/* Counter Section */
+.iot-counter-wrap {
+margin-top: 50px;
+
+}
+
+.iot-counter-wrap h3 {
+display: flex;
+align-items: center;
+font-size: 2.5rem;
+font-weight: 700;
+color: #49a760;
+margin-bottom: 5px;
+}
+
+.iot-counter-wrap p {
+color: #a29f9f;
+font-size: 1rem;
+font-weight: bold;
+margin-top: -10px;
+}
+
+/* Odometer animations (the library handles the digits) */
+.odometer {
+  display: inline-block;
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #000;
 }
-
-/* Icon Styling */
-.innovative-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-/* Solution Card */
-.solution-card {
-  background: #fff;
-  border-radius: 12px;
-  border: 20px solid #49a760;
-  padding: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Solution Image */
-.solution-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 2px solid #49a760;
-}
-
-/* Hover Effect */
-.solution-card:hover {
-  transform: scale(1.05);
-}
-
-/* Swiper Pagination */
-.innovative-pagination {
-  margin-top: 15px;
-}
-
-
 
 
 /* =============================
@@ -9368,98 +9396,57 @@ IOT INNOVATION SECTION
 /* =========================
    INNOVATIVE SOLUTIONS
 ========================= */
+/* Section Background */
 .innovative-solutions-section {
-  background: #f5f5f5;
-  padding: 80px 0;
+  background-color: #f9f9f9;
+  padding: 100px 0;
 }
+
+/* Title Styling */
 .innovative-title {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 30px;
-  text-align: left;
-  color: black;
-  
+  margin-bottom: 15px;
+  color: #000;
 }
+
+/* Icon Styling */
 .innovative-icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
+
+/* Solution Card */
 .solution-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s;
-}
-.solution-card:hover {
-  transform: translateY(-4px);
-}
-.solution-placeholder {
-  width: 100%;
-  height: 200px;
-  background: #eee;
-  border: 2px solid #49a760;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* =========================
-   CTA: Empower Farmers ...
-========================= */
-.empower-farmers-section {
-  background: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-.empower-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0px;
-  color: #000;
-}
-.empower-subtext {
-  color: #a29f9f;
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 1.6;
-  margin-bottom: 50px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-.empower-btn {
-  border: 2px solid #49a760;
-  color: #49a760;
-  background: transparent;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s;
-  margin-bottom: 30px;
-  display: inline-block;
-}
-.empower-btn:hover {
-  background: #49a760;
-  color: #fff;
-}
-.empower-logos {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-.partner-logo {
-  max-width: 200px;
+/* Solution Image */
+.solution-image {
+  width: 100%;
   height: auto;
-  transition: transform 0.3s;
+  border-radius: 8px;
+  border: 2px solid #49a760;
 }
-.partner-logo:hover {
+
+/* Hover Effect */
+.solution-card:hover {
   transform: scale(1.05);
 }
+
+/* Swiper Pagination */
+.innovative-pagination {
+  margin-top: 15px;
+}
+
+
 
 /* =============================
    BLOG SECTION STYLING
