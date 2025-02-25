@@ -492,7 +492,7 @@
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -3815,7 +3815,7 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url(../images/shapes/ripped-paper-slider-2.png);
+  background-image: url();
   background-position: center center;
   background-size: auto;
   z-index: 9;
@@ -3974,7 +3974,7 @@ h6 {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(../images/shapes/ripped-paper-slider-2.png);
+  background-image: ();
   background-position: center center;
   background-size: auto;
   z-index: 9;
@@ -4140,7 +4140,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: -16px;
   left: 0;
@@ -4176,7 +4176,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   top: -15px;
   left: 0;
@@ -4241,7 +4241,7 @@ h6 {
 
 .footer-widget p {
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   max-width: 271px;
   margin: 0;
   margin-top: 25px;
@@ -4384,7 +4384,7 @@ h6 {
   top: 50%;
   left: 0;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -4398,7 +4398,7 @@ h6 {
 .footer-widget__links li a {
   padding-left: 15px;
   display: block;
-  color: #b5c3be;
+  color: #fff;
   font-size: 14px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -4531,7 +4531,7 @@ h6 {
 }
 
 .footer-widget__contact li a {
-  color: #b5c3be;
+  color: #fff;
   font-size: 14px;
   line-height: 2;
   -webkit-transition: all 500ms ease;
@@ -4571,7 +4571,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -4619,7 +4619,7 @@ h6 {
 .bottom-footer p {
   margin: 0;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   font-weight: 500;
   line-height: 1;
 }
@@ -4654,7 +4654,7 @@ h6 {
 .bottom-footer__links a {
   line-height: 1;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5787,7 +5787,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: ();
   position: absolute;
   top: 0px;
   left: 0;
@@ -5808,7 +5808,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -6059,7 +6059,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-primary-up.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -6204,7 +6204,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-gray-up.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -6248,7 +6248,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: ();
   position: absolute;
   top: -16px;
   left: 0;
@@ -7742,7 +7742,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-testimonials-1.png);
+  background-image:();
   position: absolute;
   top: -15px;
   left: 0;
@@ -7763,7 +7763,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-testimonials-1.png);
+  background-image: ();
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -7993,7 +7993,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   top: -15px;
   left: 0;
@@ -8012,7 +8012,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   bottom: -15px;
   left: 0;
