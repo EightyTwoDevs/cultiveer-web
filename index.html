@@ -31,6 +31,11 @@
   <link rel="stylesheet" href="assets/css/odometer.min.css" />
   <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" />
   <link rel="stylesheet" href="assets/css/Poppins.css">
+
+  <!--Linking SwiperJS CSS-->
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   
   <!-- Your Main CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -300,14 +305,71 @@
          Team Section
 ============================= -->
 <section id="team" class="team-section">
-  <div class="container">
+  <div class="container ">
+    <!--<div class="swiper team-swiper"></div>-->
     <h2 class="team-title">
       <img src="assets/images/loader.png" alt="Icon" class="team-icon" />
       The Visionaries Behind Cultiveer
     </h2>
     <p class="team-subtext">Our team of innovators...</p>
 
-    <div class="team-carousel">
+    <div class="swiper"></div>
+
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/team-1-1.png" alt="" class="card-image">
+          <h4 class="card-info">Senura Naranwala</h4>
+          <p class="team-description">Team Lead</p>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/leyana.png" alt="" class="card-image">
+          <h4 class="card-info">Leyana Dabare</h4>
+          <p class="team-description">UI/UX Designer</p>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/adithya.png" alt="" class="card-image">
+          <h4 class="card-info">Adithya </h4>
+          <p class="team-description">Team Lead</p>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/raaidha.png" alt="" class="card-image">
+          <h4 class="card-info">Raaidha Razik</h4>
+          <p class="team-description">Team Lead</p>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/thedas.png" alt="" class="card-image">
+          <h4 class="card-info">Thedas</h4>
+          <p class="team-description">Team Lead</p>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="" class="card-link">
+          <img src="assets/images/team/yathusiga.png" alt="" class="card-image">
+          <h4 class="card-info">Yathusiga Sivakandan</h4>
+          <p class="team-description">Team Lead</p>
+          </a>
+        </li>
+      </ul>
+
+      <div class="swiper-pagination"></div>
+
+      <div class=" swiper-button-prev"></div>
+      <div class=" swiper-button-next"></div>
+
+    </div>
+  </div>
+  
+
+   <!-- <div class="team-carousel">
       <div class="team-card">
         <div class="team-image">
           <img src="assets/images/team/senura.jpg" alt="Senura Naranwala">
@@ -319,20 +381,20 @@
       </div>
 
       <div class="team-card">
-        <div class="team-image placeholder"></div> <!-- Placeholder for missing image -->
+        <div class="team-image placeholder"></div>  Placeholder for missing image 
         <div class="team-info">
           <h4>Leyana Dabare</h4>
           <p>UI/UX Designer</p>
         </div>
       </div>
-    </div>
+    </div>-->
 
-    <!-- Carousel Controls -->
+    <!--Carousel Controls 
     <div class="team-navigation">
       <button class="team-prev"><i class="fa fa-arrow-left"></i></button>
       <button class="team-next"><i class="fa fa-arrow-right"></i></button>
-    </div>
-  </div>
+    </div>-->
+  
 </section>
 
     
@@ -354,21 +416,31 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <div class="thm-swiper__slider swiper-container" data-swiper-options='{
-              "slidesPerView": 3,
-              "spaceBetween": 30,
-              "loop": true,
-              "autoplay": { "delay": 4000 },
-              "pagination": {
-                "el": ".innovative-pagination",
-                "clickable": true
-              },
-              "breakpoints": {
-                "0": { "slidesPerView": 1 },
-                "768": { "slidesPerView": 2 },
-                "992": { "slidesPerView": 3 }
-              }
-            }'>
+            <div class="thm-swiper__slider swiper-container">
+            <script> 
+              document.addEventListener("DOMContentLoaded", function (){
+            var swiper = new swiper(".thm-swiper__slider", {
+              slidesPerView: 3,
+                  spaceBetween: 30,
+                  loop: true,
+                  autoplay: { 
+                    delay: 4000
+                   },
+                  pagination: {
+
+                    el: ".innovative-pagination",
+                    clickable: true
+                  },
+                    breakpoints: {
+                    "0": { "slidesPerView": 1 },
+                    "768": { "slidesPerView": 2 },
+                    "992": { "slidesPerView": 3 }
+                    }
+                  });
+
+                   console.log("Swiper initialized:", swiper);
+                  });
+            </script>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="solution-card">
@@ -392,6 +464,7 @@
               <div class="innovative-pagination swiper-pagination"></div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -499,14 +572,14 @@
               <li>
                 <div class="footer-post-placeholder"></div>
                 <div>
-                  <span>Nov 16, 2023</span>
+                  <span>Nov 16, 2024</span>
                   <h6><a href="#">Precision farming with IoT</a></h6>
                 </div>
               </li>
               <li>
                 <div class="footer-post-placeholder"></div>
                 <div>
-                  <span>Nov 12, 2023</span>
+                  <span>Nov 12, 2024</span>
                   <h6><a href="#">Sustainable agriculture practices</a></h6>
                 </div>
               </li>
@@ -551,7 +624,7 @@
   <!-- Then the AjaxChimp plugin -->
 <script src="assets/js/jquery.ajaxchimp.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/jquery.validate.min.js"></script>
   <script src="assets/js/bootstrap-select.min.js"></script>
@@ -561,6 +634,16 @@
   <script src="assets/js/circle-progress.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.min.js"></script>
 
+
+
+    <!--linking swiperJS script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--Linking custom script-->
+   <script src="script.js"></script>
   <script src="assets/js/theme.js"></script>
+
+
+
 </body>
 </html>
