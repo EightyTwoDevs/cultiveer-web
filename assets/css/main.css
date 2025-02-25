@@ -2419,7 +2419,7 @@ h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-image: url(../images/shapes/header-arrow-1-1.png);
+  background-image: url(../images/shapes/header-arrow-green.png);
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -8606,7 +8606,7 @@ a:hover {
   animation-delay: 3s;
 }
 .hero-icon-6{ /*npk*/
-  top: 80%;
+  top: 75%;
   right: 25%;
   animation-delay: 0.5s;
 }
