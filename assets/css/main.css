@@ -8899,14 +8899,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 75%;
+  width: 80%;
   min-width: 300px;
 }
 
 /* Phone Image */
 .phone-image {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -9031,16 +9031,15 @@ a:hover {
 /* Image Styling */
 .smart-pot-img {
   max-width: 550px;
-  width: 80%;
+  width: 90%;
   height: auto;
 }
 
 /* Prototype Label */
 .smart-pot-proto-label {
   position: absolute;
-  top: 8%;
-  right: 0%;
-  
+  top: 100%;
+  right: 40%;
   font-size: 0.9rem;
   color: #999;
 }
