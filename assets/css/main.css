@@ -9174,86 +9174,58 @@ a:hover {
 /* =============================
 IOT INNOVATION SECTION
 ============================= */
-.iot-innovation-section {
-background-color: #f9f9f9;
-padding: 100px 0;
+/* Section Background */
+.innovative-solutions-section {
+  background-color: #f9f9f9;
+  padding: 100px 0;
 }
 
-/* IoT Title */
-.iot-title {
-display: flex;
-align-items: center;
-font-size: 2rem;
-font-weight: 700;
-margin-bottom: 15px;
-color: #000;
-}
-
-/* IoT Icon */
-.iot-icon {
-width: 30px;
-height: 30px;
-margin-right: 10px;
-}
-
-/* Subtitle */
-.iot-subtext {
-font-size: 1rem;
-color: #a29f9f;
-max-width: 600px;
-margin-bottom: 30px;
-font-weight: bold;
-line-height: 1.5;
-}
-
-/* Features List */
-.iot-features-list {
-list-style: none;
-padding: 0;
-margin-bottom: 10px;
-}
-
-.iot-features-list li {
-display: flex;
-align-items: center;
-font-size: 1rem;
-font-weight: 600;
-margin-bottom: 0px;
-}
-
-/* Feature Icons */
-.iot-icon-list {
-width: 20px;
-margin-right: 10px;
-}
-
-/* Counter Section */
-.iot-counter-wrap {
-margin-top: 50px;
-
-}
-
-.iot-counter-wrap h3 {
-display: flex;
-align-items: center;
-font-size: 2.5rem;
-font-weight: 700;
-color: #49a760;
-margin-bottom: 5px;
-}
-
-.iot-counter-wrap p {
-color: #a29f9f;
-font-size: 1rem;
-font-weight: bold;
-margin-top: -10px;
-}
-
-/* Odometer animations (the library handles the digits) */
-.odometer {
-  display: inline-block;
+/* Title Styling */
+.innovative-title {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
 }
+
+/* Icon Styling */
+.innovative-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Solution Card */
+.solution-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 20px solid #49a760;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Solution Image */
+.solution-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #49a760;
+}
+
+/* Hover Effect */
+.solution-card:hover {
+  transform: scale(1.05);
+}
+
+/* Swiper Pagination */
+.innovative-pagination {
+  margin-top: 15px;
+}
+
+
 
 
 /* =============================
