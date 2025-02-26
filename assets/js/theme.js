@@ -412,6 +412,38 @@
       }
     }
   });
+  // Ensure Swiper library is loaded before execution
+document.addEventListener("DOMContentLoaded", function () {
+  var teamSwiper = new Swiper(".team-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+      },
+      navigation: {
+          nextEl: "#team-swiper-button-next",
+          prevEl: "#team-swiper-button-prev",
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      breakpoints: {
+          640: {
+              slidesPerView: 1,
+          },
+          992: {
+              slidesPerView: 1,
+          },
+          1200: {
+              slidesPerView: 1,
+          }
+      }
+  });
+});
+
 
 })(jQuery);
 

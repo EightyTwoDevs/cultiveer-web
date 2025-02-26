@@ -8732,306 +8732,697 @@ a:hover {
   }
 }
 
-
 /* =========================
-   PROJECTS TILES
+   PROJECTS SECTION
 ========================= */
 .projects-section {
-  padding: 40px 0;
+  padding: 40px 0px;
   background-color: #fdfdfd;
+
 }
+
+/* Section Title */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 30px;
-  margin-top: 20px;
-  margin-left: 10px;
+  color: #000;
+  display: flex;
+  margin-bottom: 20px; 
+}
+
+/* Icon for Section Title */
+.section-title .section-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Row: Centers both tiles side by side */
+.projects-row {
+  display: flex; 
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns vertically */
+  gap:0px; /* Spacing between tiles */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  max-width: 500px; /* Prevents excessive stretching */
+  margin: 0 auto; /* Centers the row */
+}
+
+/* Project Tile Styling */
+.project-tile {
+  border: 2px solid #49a760;
+  border-radius: 12px;
+  padding: 30px;  
+  width: 75%; /* Adjusted for even spacing */
+  max-width: 400px; /* Prevents excessive stretching */
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .projects-row {
+      flex-direction: row; /* Keeps them side by side */
+      justify-content: center;
+  }
+
+  .project-tile {
+      width: 48%; /* Adjust width for medium screens */
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-row {
+      flex-direction: column; /* Stack vertically on small screens */
+      align-items: center;
+  }
+
+  .project-tile {
+      width: 90%; /* Increase width for smaller screens */
+      max-width: 400px;
+  }
+}
+
+/* Project Card Title */
+.project-tile-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Project Card List */
+.project-tile-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* List Items */
+.project-tile-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
   display: flex;
   align-items: center;
 }
 
-.project-tile {
-  border: 2px solid #49a760;
-  border-radius: 12px;
-  padding: 15px 20px;
-  width: 80%;
-  background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  
-}
-.project-tile h4 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-.project-tile ul {
-  list-style: disc;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 !important;
+/* Bullet Styling */
+.project-tile-list li::before {
+  content: "•";
+  color: #4CAF50;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-/* =========================
+
+/* =============================
    ADVANTAGES SECTION
-========================= */
+============================= */
 .advantages-section {
   position: relative;
   padding: 80px 0;
   background-color: #f4f4f4;
 }
-.phone-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-.advantages-content h3 {
-  font-size: 1.5rem;
+
+.section-title {
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 200px;
+  margin-bottom: 50px;
 }
+
+/* Layout Wrapper */
+.advantages-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Farmers' & Urban Users' Content */
+.advantages-block {
+  width: 30%;
+  text-align: left;
+}
+
+/* Farmers (Align Left) */
+.advantages-block.left {
+  text-align: left;
+  color: black;
+}
+
+/* Urban Users (Align Right) */
+.advantages-block.right {
+  text-align: left;
+  color: black;
+  margin-top: 280px;
+}
+
+/* Title Styling */
+.advantages-block h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0px;
+  color: rgb(171, 169, 169);
+}
+
+/* List Styling */
 .advantages-list {
   list-style: none;
   padding-left: 0;
+  margin-top: 0px;
 }
+
 .advantages-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600;
 }
+
+/* Icon Styling */
 .advantage-icon {
-  width: 32px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
-/* =========================
-   SMART POT SECTION
-========================= */
-.smart-pot-section {
+/* Center Phone */
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding: 80px 0;
-  background-color: #f9f9f9;
-}
-.smart-pot-image-wrapper {
-  position: relative;
-  text-align: center;
-}
-.smart-pot-img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  border-radius: 8px;
-}
-.smart-pot-proto-label {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  font-size: 0.9rem;
-  color: #999;
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-#smart-pot-img-col.scrolled .smart-pot-proto-label {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.3s;
+  width: 80%;
+  min-width: 300px;
 }
 
-/* =========================
-   PROJECT UPDATES (VIDEO)
-========================= */
+/* Phone Image */
+.phone-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Arrows */
+.advantage-arrow {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Left Arrow */
+.arrow-left {
+  left: -140px;
+  top: 5%;
+  width: 350px;
+  transform: translateX(-10px); /* Initial position */
+}
+
+/* Right Arrow */
+.arrow-right {
+  right: -140px;
+  top: 5%;
+  width: 350px;
+  transform: translateX(10px); /* Initial position */
+}
+
+/* Hover effect */
+.advantage-arrow:hover {
+  transform: scale(1.2) rotate(5deg); /* Slight rotation and scale effect */
+  opacity: 0.9;
+}
+
+/* Left Arrow Hover - Moves slightly left */
+.arrow-left:hover {
+  transform: translateX(-20px) scale(1.2) rotate(-5deg);
+}
+
+/* Right Arrow Hover - Moves slightly right */
+.arrow-right:hover {
+  transform: translateX(20px) scale(1.2) rotate(5deg);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+  .advantages-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .advantages-block {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .advantages-block.left,
+  .advantages-block.right {
+    text-align: center;
+  }
+
+  .advantages-list li {
+    justify-content: center;
+  }
+
+  .phone-wrapper {
+    width: 70%;
+    margin-bottom: 40px;
+  }
+
+  .advantage-arrow {
+    width: 100px;
+  }
+
+  .arrow-left {
+    left: -40px;
+    top: 10%;
+  }
+
+  .arrow-right {
+    right: -40px;
+    top: 10%;
+  }
+}
+
+/* =============================
+   SMART POT SECTION
+============================= */
+.smart-pot-section {
+  position: relative;
+  padding: 100px 0;
+  background-color: #f9f9f9;
+}
+
+/* Smart Pot Title */
+.smart-pot-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Smart Pot Description */
+.smart-pot-desc {
+  font-size: 1rem;
+  color: #a29f9f;
+  max-width: 450px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+/* Image Wrapper */
+.smart-pot-image-wrapper {
+  position: relative;
+  text-align: left;
+}
+
+/* Image Styling */
+.smart-pot-img {
+  max-width: 550px;
+  width: 90%;
+  height: auto;
+}
+
+/* Prototype Label */
+.smart-pot-proto-label {
+  position: absolute;
+  top: 100%;
+  right: 40%;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .row.align-items-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .smart-pot-title {
+    justify-content: center;
+  }
+
+  .smart-pot-desc {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .smart-pot-image-wrapper {
+    text-align: center;
+  }
+
+  .smart-pot-img {
+    max-width: 400px;
+  }
+
+  .smart-pot-proto-label {
+    top: 5%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* =============================
+   PROJECT UPDATES SECTION
+============================= */
 .project-updates-section {
   background: #f9f9f9;
-  padding: 80px 0;
+  padding: 100px 0;
 }
+.updates-icon{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+/* Title Styling */
 .updates-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  gap: 10px;
+  color: #000;
 }
+
+/* Subtitle Styling */
 .updates-subtext {
-  color: #777;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  color: #a29f9f;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 40px;
   max-width: 600px;
+  line-height: 1.6;
 }
+
+/* Video Placeholder */
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  height: 400px;
+  background-color: #f2f2f2;
   margin: 0 auto;
-  padding-top: 56.25%;
-}
-.video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* =========================
-   IOT INNOVATION (ODOMETER)
-========================= */
-.iot-innovation-section {
-  background-color: #f9f9f9;
-  padding: 80px 0;
-}
-.iot-title {
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Video Container */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Adjust based on your design */
+  height: 400px; /* Ensures it maintains a box shape */
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Video iframe Styling */
+.video-wrapper iframe {
+  width: 100%;  /* Ensure it stretches */
+  height: 100%; /* Ensure it fills the container */
+  border: none;
+  border-radius: 12px;
+}
+
+.video-placeholder {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .updates-title {
+    font-size: 1.8rem;
+  }
+
+  .updates-subtext {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .video-wrapper {
+    height: 300px;
+  }
+}
+
+/* =============================
+IOT INNOVATION SECTION
+============================= */
+.iot-innovation-section {
+background-color: #f9f9f9;
+padding: 100px 0;
+}
+
+/* IoT Title */
+.iot-title {
+display: flex;
+align-items: center;
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 15px;
+color: #000;
+}
+
+/* IoT Icon */
 .iot-icon {
-  width: 28px;
-  margin-right: 8px;
+width: 30px;
+height: 30px;
+margin-right: 10px;
 }
+
+/* Subtitle */
 .iot-subtext {
-  font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 30px;
+font-size: 1rem;
+color: #a29f9f;
+max-width: 600px;
+margin-bottom: 30px;
+font-weight: bold;
+line-height: 1.5;
 }
+
+/* Features List */
 .iot-features-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
+list-style: none;
+padding: 0;
+margin-bottom: 10px;
 }
+
 .iot-features-list li {
-  margin-bottom: 10px;
+display: flex;
+align-items: center;
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 0px;
 }
+
+/* Feature Icons */
+.iot-icon-list {
+width: 20px;
+margin-right: 10px;
+}
+
+/* Counter Section */
 .iot-counter-wrap {
-  margin-top: 40px;
+margin-top: 50px;
+
 }
+
 .iot-counter-wrap h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #49a760;
-  margin-bottom: 5px;
+display: flex;
+align-items: center;
+font-size: 2.5rem;
+font-weight: 700;
+color: #49a760;
+margin-bottom: 5px;
 }
+
 .iot-counter-wrap p {
-  color: #666;
-  font-size: 1rem;
+color: #a29f9f;
+font-size: 1rem;
+font-weight: bold;
+margin-top: -10px;
 }
+
 /* Odometer animations (the library handles the digits) */
 .odometer {
   display: inline-block;
   font-size: 2rem;
 }
 
+
 /* =============================
-   TEAM SECTION
+   TEAM SECTION STYLING
 ============================= */
-.team-section {
-  background: #f9f9f9;
+.team-one {
+  background-color: #fff;
   padding: 80px 0;
-  text-align: center;
 }
 
-/* Title Styling */
-.team-title {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 700;
+.team-one .container {
+  position: relative;
+}
+
+.team-icon {
+  width: 28px;
+  height: 28px;
   margin-bottom: 10px;
 }
-.team-icon{
-  width: 28px;
-  margin-right: 8px;
-}
-.team-subtext {
-  font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 30px;
+
+/* Left Content Styling */
+.team-one__content {
   text-align: left;
-  
 }
 
-/* Team Carousel */
-.team-carousel {
+.team-one__content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.team-one__summary {
+  font-size: 1rem;
+  color: #a29f9f;
+  line-height: 1.6;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+/* Team Cards Styling */
+.team-cards {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
+  justify-content: space-between;
 }
 
-/* Team Card */
 .team-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  width: 350px;
+
   text-align: center;
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
+.team-card img:hover {
+  transform: scale(1.05);
 }
 
-/* Team Image */
-.team-image {
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.team-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Placeholder Styling */
-.team-image.placeholder {
-  background: #ddd;
-}
-
-/* Team Info */
-.team-info h4 {
+.team-card h3 {
   font-size: 1.2rem;
-  font-weight: 700;
-  color: #000;
+  font-weight: bold;
+  color: #255946;
   margin-top: 15px;
 }
 
-.team-info p {
-  font-size: 1rem;
-  color: #777;
+.team-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
 }
 
-/* Navigation Arrows */
-.team-navigation {
+/* Swiper Styles */
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: relative;
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
 }
 
-.team-prev,
-.team-next {
-  border: 2px solid #49a760;
-  background: none;
-  color: #49a760;
-  padding: 10px;
+/* Swiper Navigation Buttons */
+.team-one__nav {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: transparent;
+  border: 2px solid #255946;
+  color: #255946;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
-.team-prev:hover,
-.team-next:hover {
-  background: #49a760;
-  color: #fff;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #255946;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .team-cards {
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  .team-card {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-one__content {
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  .team-cards {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
 /* =============================
@@ -9060,12 +9451,13 @@ a:hover {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
-  display: inline-flex;
-  align-items: center;
+  text-align: left;
+  color: black;
+  
 }
 .innovative-icon {
-  width: 28px;
-  height: auto;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 .solution-card {
@@ -9087,18 +9479,6 @@ a:hover {
   border-radius: 12px;
   margin-bottom: 15px;
 }
-.solution-readmore {
-  border: 2px solid #49a760;
-  color: #49a760;
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.solution-readmore:hover {
-  background: #49a760;
-  color: #fff;
-}
 
 /* =========================
    CTA: Empower Farmers ...
@@ -9111,15 +9491,19 @@ a:hover {
 .empower-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  color: #000;
 }
 .empower-subtext {
-  color: #666;
+  color: #a29f9f;
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
 }
 .empower-btn {
   border: 2px solid #49a760;
@@ -9152,41 +9536,139 @@ a:hover {
   transform: scale(1.05);
 }
 
-/* =========================
-   BLOG HOME (NEWS)
-========================= */
+/* =============================
+   BLOG SECTION STYLING
+============================= */
 .blog-home-two {
   background: #f9f9f9;
-  padding: 60px 0;
+  padding: 100px 0;
 }
+
+.blog-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Section Title */
 .blog-title {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+  text-align: left;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  gap: 10px;
 }
+
+/* Section Subtitle */
 .blog-subtext {
-  color: #666;
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  color: #a29f9f;
+  font-weight: bold;
+  text-align: left;
+  max-width: 700px;
+  line-height: 1.4;
+  margin-bottom: 40px;
 }
-.blog-card {
+
+/* Swiper Container */
+.thm-swiper__slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blog Card - Inside Swiper */
+.solution-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  margin-bottom: 30px;
-}
-.blog-card__image .blog-placeholder {
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 25px;
   width: 100%;
-  height: 180px;
-  background: #ccc;
-  border-radius: 12px 12px 0 0;
+  max-width: 340px;
+  border: 1px solid rgba(73, 167, 96, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.blog-card__content {
-  padding: 15px 20px;
+
+/* Blog Image Placeholder */
+.solution-placeholder {
+  background: #ddd;
+  width: 100%;
+  height: 240px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
-.blog-card__content h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+
+/* Read More Button */
+.solution-readmore {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #49a760;
+  color: #49a760;
+  border-radius: 8px;
+  transition: all 0.3s;
+  margin-top: 15px;
+}
+
+/* Hover Effects */
+.solution-readmore:hover {
+  background: #49a760;
+  color: #fff;
+}
+
+/* Blog Card Hover */
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Swiper Pagination */
+.innovative-pagination {
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .blog-title {
+    font-size: 1.8rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .blog-subtext {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 40px auto;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .solution-card {
+    width: 90%;
+    max-width: 100%;
+  }
 }
 
 /* =========================

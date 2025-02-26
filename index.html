@@ -150,29 +150,33 @@
     <!-- =============================
          Projects (Tiles) 
        ============================= -->
+      
     <section id="projects" class="projects-section">
-      <div class="container scroll-animate">
+      <div class="container">
+        <!-- Section Title with Icon -->
         <h2 class="section-title">
-          <img src="assets/images/loader.png" alt="" class="section-icon"/>
+          <img src="assets/images/loader.png" alt="Leaf Icon" class="section-icon">
           Our Projects
         </h2>
+
         <div class="row">
-          <!-- Left tile -->
+          <!-- Left Tile: Rice Farmer Solution -->
           <div class="col-md-6">
             <div class="project-tile">
-              <h4>Rice Farmer Solution</h4>
-              <ul>
+              <h4 class="project-tile-title">Rice Farmer Solution</h4>
+              <ul class="project-tile-list">
                 <li>Real-time soil health tracking</li>
                 <li>Precision fertilizer recommendations</li>
                 <li>Weather-based farming guidance</li>
               </ul>
             </div>
           </div>
-          <!-- Right tile -->
+
+          <!-- Right Tile: Smart Pot -->
           <div class="col-md-6">
             <div class="project-tile">
-              <h4>Smart Pot For Urban Users</h4>
-              <ul>
+              <h4 class="project-tile-title">Smart Pot For Urban Users</h4>
+              <ul class="project-tile-list">
                 <li>Detects soil conditions</li>
                 <li>Tailored plant care recommendations</li>
                 <li>Compact and stylish design</li>
@@ -183,76 +187,93 @@
       </div>
     </section>
 
-    <!-- =============================
-         Advantages (Phone center + text)
-       ============================= -->
-    <section id="advantages" class="advantages-section">
-      <div class="arrows-bg">
-        <!-- e.g., arrow images absolutely positioned if needed -->
-      </div>
-      <div class="container">
-        <!-- Phone in the middle -->
-        <div class="phone-wrapper scroll-animate" id="advantages-phone">
-          <img src="assets/images/new-icons/phone.png" alt="Cultiveer App" class="phone-image" />
-        </div>
+<!-- =============================
+     Advantages Section
+============================= -->
+   <section id="advantages" class="advantages-section">
+  <div class="container">
+    <div class="advantages-layout">
 
-        <div class="row advantages-content">
-          <!-- Farmers -->
-          <div class="col-md-6 scroll-animate">
-            <h3>For Farmers</h3>
-            <ul class="advantages-list">
-              <li><img src="assets/images/new-icons/money.png" alt="Icon" class="advantage-icon" /> Reduce costs</li>
-              <li><img src="assets/images/new-icons/sustainable-agriculture.png" alt="Icon" class="advantage-icon" /> Boost yields</li>
-              <li><img src="assets/images/new-icons/area.png" alt="Icon" class="advantage-icon" /> Adapt to weather changes</li>
-            </ul>
-          </div>
-          <!-- Urban -->
-          <div class="col-md-6 scroll-animate">
-            <h3>For Urban Users</h3>
-            <ul class="advantages-list">
-              <li><img src="assets/images/new-icons/vegetarian.png" alt="Icon" class="advantage-icon" /> Grow fresh vegetables</li>
-              <li><img src="assets/images/new-icons/plant-pot.png" alt="Icon" class="advantage-icon" /> Effortless plant care</li>
-              <li><img src="assets/images/new-icons/check_land_statistics.png" alt="Icon" class="advantage-icon" /> Enhance urban living</li>
-            </ul>
-          </div>
-        </div>
+      <!-- Farmers' Advantages (Left) -->
+      <div class="advantages-block left" data-animate="slide-left">
+        <h2 class="section-title" data-animate="fade-up">
+          <img src="assets/images/loader.png" alt="Icon" class="section-icon" />
+          Advantages
+        </h2>
+        <h3>For Farmers</h3>
+        <ul class="advantages-list">
+          <li data-animate="fade-in"><img src="assets/images/new-icons/money.png" alt="Icon" class="advantage-icon" /> Reduce costs</li>
+          <li data-animate="fade-in"><img src="assets/images/new-icons/sustainable-agriculture.png" alt="Icon" class="advantage-icon" /> Boost yields</li>
+          <li data-animate="fade-in"><img src="assets/images/new-icons/area.png" alt="Icon" class="advantage-icon" /> Adapt to weather changes</li>
+        </ul>
       </div>
-    </section>
+
+      <!-- Phone in the Middle -->
+      <div class="phone-wrapper">
+        <img src="assets/images/new-icons/left.png" alt="Arrow Left" class="advantage-arrow arrow-left">
+        <img src="assets/images/new-icons/phone.png" alt="Cultiveer App" class="phone-image" />
+        <img src="assets/images/new-icons/right.png" alt="Arrow Right" class="advantage-arrow arrow-right">
+      </div>
+
+      <!-- Urban Users' Advantages (Right) -->
+      <div class="advantages-block right" data-animate="slide-right">
+        <h3>For Urban Users</h3>
+        <ul class="advantages-list">
+          <li data-animate="fade-in"><img src="assets/images/new-icons/vegetarian.png" alt="Icon" class="advantage-icon" /> Grow fresh vegetables</li>
+          <li data-animate="fade-in"><img src="assets/images/new-icons/plant-pot.png" alt="Icon" class="advantage-icon" /> Effortless plant care</li>
+          <li data-animate="fade-in"><img src="assets/images/new-icons/check_land_statistics.png" alt="Icon" class="advantage-icon" /> Enhance urban living</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
     <!-- =============================
          Smart Pot Section
        ============================= -->
-    <section id="smart-pot" class="smart-pot-section">
-      <div class="container">
-        <div class="row">
-          <!-- Text col -->
-          <div class="col-lg-6 scroll-animate">
-            <h2>Smart Pot for Urban Users</h2>
-            <p>The smart pot is a compact, innovative solution for urban farming...</p>
-          </div>
-          <!-- Image col -->
-          <div class="col-lg-6 scroll-animate" id="smart-pot-img-col">
-            <div class="smart-pot-image-wrapper">
-              <img src="assets/images/new-icons/smartPot.png" alt="Smart Pot" class="smart-pot-img" />
-              <span class="smart-pot-proto-label">* Smart Pot Prototype - 1</span>
+
+       <section id="smart-pot" class="smart-pot-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Text column -->
+            <div class="col-lg-6 scroll-animate">
+              <h2 class="smart-pot-title">
+                <img src="assets/images/loader.png" alt="Icon" class="section-icon" />
+                Smart Pot for Urban Users
+              </h2>
+              <p class="smart-pot-desc">
+                The smart pot is a compact, innovative solution for urban farming, offering real-time insights into soil conditions and personalized care recommendations.
+              </p>
+            </div>
+            <!-- Image column -->
+            <div class="col-lg-6 scroll-animate" id="smart-pot-img-col">
+              <div class="smart-pot-image-wrapper">
+                <img src="assets/images/new-icons/smartpot_2.png" alt="Smart Pot" class="smart-pot-img" />
+                <span class="smart-pot-proto-label">Smart Pot Prototype - 1</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
 
     <!-- =============================
          Project Updates (Video)
        ============================= -->
-    <section id="project-updates" class="project-updates-section">
-      <div class="container scroll-animate">
-        <h2 class="updates-title">
-          <img src="assets/images/loader.png" alt="Icon" class="updates-icon"/>
-          Project Updates
-        </h2>
-        <p class="updates-subtext">
-          Stay informed with the latest progress and milestones of Cultiveer...
-        </p>
+       <section id="project-updates" class="project-updates-section">
+        <div class="container scroll-animate">
+          <h2 class="updates-title">
+            <img src="assets/images/loader.png" alt="Icon" class="updates-icon" />
+            Project Updates
+          </h2>
+          <p class="updates-subtext">
+            Stay informed with the latest progress and milestones of 
+Cultiveer, including prototype developments and upcoming 
+features
+          </p>
 
         <div class="video-wrapper">
           <!-- Reuse your existing video link or placeholder -->
@@ -269,75 +290,134 @@
     <!-- =============================
          IoT Innovation (Odometer)
        ============================= -->
-    <section id="iot-innovation" class="iot-innovation-section">
-      <div class="container">
-        <div class="row scroll-animate">
-          <div class="col-lg-12">
-            <h2 class="iot-title">
-              <img src="assets/images/loader.png" alt="Leaf" class="iot-icon" />
-              Innovating Agriculture with IoT
-            </h2>
-            <p class="iot-subtext">
-              Cultiveer empowers farmers with IoT-enabled solutions...
-            </p>
-            <ul class="iot-features-list">
-              <li>Precision farming recommendations</li>
-              <li>Real-time soil nutrient analysis</li>
-              <li>Sustainability at its core</li>
-            </ul>
-            <div class="iot-counter-wrap">
-              <h3>
-                <span class="odometer" data-count="50000">0</span>+
-              </h3>
-              <p>Farmers Benefited Worldwide</p>
+       <section id="iot-innovation" class="iot-innovation-section">
+        <div class="container">
+          <div class="row scroll-animate">
+            <div class="col-lg-12">
+              <h2 class="iot-title">
+                <img src="assets/images/loader.png" alt="Leaf" class="iot-icon" />
+                Innovating Agriculture with IoT
+              </h2>
+              <p class="iot-subtext">
+                Cultiveer empowers farmers with IoT-enabled solutions to monitor soil health, optimize resources, and maximize yields sustainably.
+              </p>
+              <ul class="iot-features-list">
+                <li>
+                  <img src="assets/images/new-icons/scarecrow.png" alt="Icon" class="iot-icon-list" />
+                  <span>Precision farming recommendations</span>
+                </li>
+                <li>
+                  <img src="assets/images/new-icons/meal.png" alt="Icon" class="iot-icon-list" />
+                  <span>Real-time soil nutrient analysis</span>
+                </li>
+                <li>
+                  <img src="assets/images/new-icons/sun.png" alt="Icon" class="iot-icon-list" />
+                  <span>Sustainability at its core</span>
+                </li>
+              </ul>
+              <div class="iot-counter-wrap">
+                <h3>
+                  <img src="assets/images/new-icons/sun.png" alt="Icon" class="iot-icon-list" />
+                  <span class="odometer" data-count="50000">0</span>+
+                </h3>
+                <p>Farmers Benefited Worldwide</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
 <!-- =============================
          Team Section
 ============================= -->
-<section id="team" class="team-section">
+<section class="team-one">
   <div class="container">
-    <h2 class="team-title">
-      <img src="assets/images/loader.png" alt="Icon" class="team-icon" />
-      The Visionaries Behind Cultiveer
-    </h2>
-    <p class="team-subtext">Our team of innovators...</p>
+      <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-5">
+              <div class="team-one__content">
+                  <div class="block-title">
+                      <img src="assets/images/loader.png" alt="Icon" class="team-icon">
+                      <p>MEET THE TEAM</p>
+                      <h2>The Visionaries Behind Cultiveer</h2>
+                  </div>
+                  <p class="team-one__summary">
+                    Our team of passionate second-year undergraduates in software engineering is dedicated to revolutionizing agriculture by integrating technology and sustainability. Together, we’re shaping a smarter future for farming through innovation and research.                  </p>
 
-    <div class="team-carousel">
-      <div class="team-card">
-        <div class="team-image">
-          <img src="assets/images/team/team-1-1.png" alt="Senura Naranwala">
-        </div>
-        <div class="team-info">
-          <h4>Senura Naranwala</h4>
-          <p>Team Lead</p>
-        </div>
+                  <!-- Swiper Navigation Buttons -->
+                  <div class="team-one__nav">
+                      <div class="swiper-button-prev" id="team-swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                      <div class="swiper-button-next" id="team-swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Right Team Members - Swiper -->
+          <div class="col-lg-7">
+              <div class="swiper team-swiper">
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide">
+                          <div class="row team-cards">
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/team-1-1.png" alt="Senura Naranwala">
+                                      <h3>Senura Naranwala</h3>
+                                      <p>Team Lead & Project Manager</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/leyana.png" alt="Leyana Dabare">
+                                      <h3>Leyana Dabare</h3>
+                                      <p>UI/UX Designer & Marketing</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/adithya.png" alt="Adithya Kalhara">
+                                      <h3>Adithya Kalhara</h3>
+                                      <p>Backend Developer</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                          <div class="row team-cards">
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/thedas.png" alt="Thedas Gunawardhana">
+                                      <h3>Thedas Gunawardhana</h3>
+                                      <p>Database Specialist</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/raaidha.png" alt="Raaidha Razik">
+                                      <h3>Raaidha Razik</h3>
+                                      <p>Machine Learning Engineer</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="team-card">
+                                      <img src="assets/images/team/yathusiga.png" alt="Yathishiga Sivakanthan">
+                                      <h3>Yathishiga Sivakanthan</h3>
+                                      <p>IoT Device Engineer</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Pagination -->
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
       </div>
-
-      <div class="team-card">
-        <div class="team-image">
-          <img src="assets/images/team/leyana.png" alt="Leyana Dabare">
-        </div>
-        <div class="team-info">
-          <h4>Leyana Dabare</h4>
-          <p>UI/UX Designer</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Carousel Controls -->
-    <div class="team-navigation">
-      <button class="team-prev"><i class="fa fa-arrow-left"></i></button>
-      <button class="team-next"><i class="fa fa-arrow-right"></i></button>
-    </div>
   </div>
 </section>
-
-    
 
     <!-- =============================
          Innovative Farming Solutions
@@ -350,14 +430,13 @@
               <img src="assets/images/loader.png" alt="Leaf Icon" class="innovative-icon" />
               Innovative Farming Solutions
             </h2>
-            <p class="text-muted">Explore our advanced approaches ...</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-12">
             <div class="thm-swiper__slider swiper-container" data-swiper-options='{
-              "slidesPerView": 3,
+              "slidesPerView": 1,
               "spaceBetween": 30,
               "loop": true,
               "autoplay": { "delay": 4000 },
@@ -375,19 +454,19 @@
                 <div class="swiper-slide">
                   <div class="solution-card">
                     <div class="solution-placeholder"></div>
-                    <a href="#" class="btn solution-readmore">Read More</a>
+                   
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="solution-card">
                     <div class="solution-placeholder"></div>
-                    <a href="#" class="btn solution-readmore">Read More</a>
+                    
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="solution-card">
                     <div class="solution-placeholder"></div>
-                    <a href="#" class="btn solution-readmore">Read More</a>
+                    
                   </div>
                 </div>
               </div>
@@ -406,10 +485,14 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="empower-title">
-              Empower Farmers with Smart Solutions
+              Empower Farmers with 
+            </h2>
+            <h2 class="empower-title">
+              Smart Solutions
             </h2>
             <p class="empower-subtext">
-              Join us in transforming agriculture ... 
+              Join us in transforming agriculture through innovation, sustainability, and precision. 
+Discover how Cultiveer is driving the future of farming. 
             </p>
             <a href="about.html" class="btn empower-btn">Learn More!</a>
 
@@ -425,33 +508,65 @@
     <!-- =============================
          Blog / Latest Updates
        ============================= -->
-    <section id="news" class="blog-home-two scroll-animate">
-      <div class="container">
-        <div class="row top-row">
-          <div class="col-lg-6">
-            <h2 class="blog-title">Latest Updates & Insights <br> from Cultiveer</h2>
-            <p class="blog-subtext">Explore how Cultiveer is revolutionizing agriculture ...</p>
+       <section id="news" class="blog-home-two scroll-animate">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="blog-title">
+                <img src="assets/images/loader.png" alt="Icon" class="blog-icon" />
+                Latest Updates & Insights <br> from Cultiveer
+              </h2>
+              <p class="blog-subtext">
+                Explore how Cultiveer is revolutionizing agriculture with cutting-edge 
+                IoT solutions, sustainable practices, and innovative approaches to farming.              </p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <!-- 3 placeholders cards -->
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__image">
-                <div class="blog-placeholder"></div>
-                <!-- or <img src="assets/images/blog/blog4.jpg" ...> -->
-              </div>
-              <div class="blog-card__content">
-                <h4>IoT Solutions for Precision Farming</h4>
-                <a href="#" class="thm-btn">Read More</a>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="thm-swiper__slider swiper-container" data-swiper-options='{
+                "slidesPerView": 3,
+                "spaceBetween": 30,
+                "loop": true,
+                "autoplay": { "delay": 4000 },
+                "pagination": {
+                  "el": ".innovative-pagination",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "0": { "slidesPerView": 1 },
+                  "768": { "slidesPerView": 2 },
+                  "992": { "slidesPerView": 3 }
+                }
+              }'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="solution-card">
+                      <div class="solution-placeholder"></div>
+                      <a href="#" class="btn solution-readmore">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="innovative-pagination swiper-pagination"></div>
               </div>
             </div>
           </div>
-          <!-- ... Repeat for more cards -->
         </div>
-      </div>
-    </section>
-
+      </section>
+      
     <!-- =============================
          Footer / CTA
        ============================= -->
