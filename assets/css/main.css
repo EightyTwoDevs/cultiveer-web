@@ -492,7 +492,7 @@
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -517,6 +517,7 @@
 
 .team-one .container {
   position: relative;
+  height: fit-content;
 }
 
 @media (min-width: 992px) {
@@ -582,7 +583,7 @@
   border: 2px solid #255946;
   border-radius: 50%;
   opacity: 0.3;
-  margin: 0;
+  margin: 0 15px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   outline: none;
@@ -650,6 +651,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  height: 300px;
 }
 
 .team-card__image::before {
@@ -670,6 +672,7 @@
 
 .team-card__image > img {
   width: 100%;
+  height: 100%;
 }
 
 .team-card:hover .team-card__image::before {
@@ -1805,15 +1808,15 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --thm-font: "Inter", sans-serif;
-  --heading-font: "Inter", sans-serif;
-  --special-font: "Handlee", cursive;
+  --thm-font: "Poppins", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+  --special-font: "Poppins", cursive;
   --thm-color: #6e7673;
   --thm-color-rgb: 110, 118, 115;
   --thm-base: #49a760;
   --thm-base-rgb: 73, 167, 96;
-  --thm-primary: #f7c35f;
-  --thm-primary-rgb: 247, 195, 95;
+  --thm-primary: #6cbc4c;
+  --thm-primary-rgb: rgb(108,188,76);
   --thm-secondary: #ed4b4b;
   --thm-secondary-rgb: 237, 75, 75;
   --thm-special: #5366c2;
@@ -2297,21 +2300,9 @@ h6 {
 .main-menu {
   -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
   position: relative;
   z-index: 91;
-}
-
-.main-menu::after {
-  content: "";
-  width: 100%;
-  height: 16px;
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  background-image: url(../images/shapes/ripped-paper-header-1.png);
-  background-position: center center;
-  background-size: auto;
 }
 
 @media (min-width: 1700px) {
@@ -2428,7 +2419,7 @@ h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-image: url(../images/shapes/header-arrow-1-1.png);
+  background-image: url(../images/shapes/header-arrow-green.png);
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -2894,7 +2885,7 @@ h6 {
 @media (min-width: 992px) {
   .main-header__two {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -3824,7 +3815,7 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url(../images/shapes/ripped-paper-slider-2.png);
+  background-image: url();
   background-position: center center;
   background-size: auto;
   z-index: 9;
@@ -3983,7 +3974,7 @@ h6 {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(../images/shapes/ripped-paper-slider-2.png);
+  background-image: ();
   background-position: center center;
   background-size: auto;
   z-index: 9;
@@ -4149,7 +4140,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: -16px;
   left: 0;
@@ -4185,7 +4176,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   top: -15px;
   left: 0;
@@ -4250,7 +4241,7 @@ h6 {
 
 .footer-widget p {
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   max-width: 271px;
   margin: 0;
   margin-top: 25px;
@@ -4393,7 +4384,7 @@ h6 {
   top: 50%;
   left: 0;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -4407,7 +4398,7 @@ h6 {
 .footer-widget__links li a {
   padding-left: 15px;
   display: block;
-  color: #b5c3be;
+  color: #fff;
   font-size: 14px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -4540,7 +4531,7 @@ h6 {
 }
 
 .footer-widget__contact li a {
-  color: #b5c3be;
+  color: #fff;
   font-size: 14px;
   line-height: 2;
   -webkit-transition: all 500ms ease;
@@ -4580,7 +4571,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -4628,7 +4619,7 @@ h6 {
 .bottom-footer p {
   margin: 0;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   font-weight: 500;
   line-height: 1;
 }
@@ -4663,7 +4654,7 @@ h6 {
 .bottom-footer__links a {
   line-height: 1;
   font-size: 14px;
-  color: #b5c3be;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5796,7 +5787,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: ();
   position: absolute;
   top: 0px;
   left: 0;
@@ -5817,7 +5808,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: url();
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -6068,7 +6059,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-primary-up.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -6213,7 +6204,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-gray-up.png);
+  background-image: url();
   position: absolute;
   top: -16px;
   left: 0;
@@ -6257,7 +6248,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-white-up.png);
+  background-image: ();
   position: absolute;
   top: -16px;
   left: 0;
@@ -7751,7 +7742,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-testimonials-1.png);
+  background-image:();
   position: absolute;
   top: -15px;
   left: 0;
@@ -7772,7 +7763,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-testimonials-1.png);
+  background-image: ();
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -8002,7 +7993,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   top: -15px;
   left: 0;
@@ -8021,7 +8012,7 @@ h6 {
   content: "";
   width: 100%;
   height: 16px;
-  background-image: url(../images/shapes/ripped-paper-base-2.png);
+  background-image: url();
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -8470,7 +8461,7 @@ h6 {
 ========================= */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #333;
 }
@@ -8548,8 +8539,9 @@ a:hover {
 ========================= */
 .hero-section {
   position: relative;
+  overflow: hidden;
   padding: 120px 0 100px;
-  background-color: #f0f0f0;
+  background-color: white;
   text-align: center;
   margin-top: 70px; /* offset for fixed header */
 }
@@ -8586,16 +8578,53 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   border-radius: 16px;
   overflow: hidden;
+  animation: float 6s ease-in-out infinite;
 }
-.hero-icon-1 {
+.hero-icon-1 { /*alt crop*/
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.hero-icon-2 { /*plant*/
+  top: 12%;
+  right: 10%;
+  animation-delay: 1s;
+}
+.hero-icon-3{ /*weed*/
+  top: 50%;
+  left: 30%;
+  animation-delay: 2s;
+}
+.hero-icon-4{ /*scrawcrow*/
   top: 30%;
-  left: 15%;
+  right: 30%;
+  animation-delay: 2s;
 }
-.hero-icon-2 {
-  top: 20%;
-  right: 15%;
+.hero-icon-5{ /*profit*/
+  top: 70%;
+  left: 10%;
+  animation-delay: 3s;
 }
-
+.hero-icon-6{ /*npk*/
+  top: 75%;
+  right: 25%;
+  animation-delay: 0.5s;
+}
+.hero-icon-7{  /*yeild*/
+  top: 10%;
+  left: 25%;
+  animation-delay: 1.5s;
+}
+.hero-icon-8{ /*sus agri*/
+  top: 60%;
+  right: 5%;
+  animation-delay: 2.5s;
+}
+@keyframes float{
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(20px, 20px); }
+  100% { transform: translate(0, 0); }
+}
 /* =========================
    SCROLL ANIMATION
 ========================= */
@@ -8629,6 +8658,7 @@ a:hover {
   width: 30px; /* Increase icon size */
   height: 30px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .about-text h2 {
@@ -8755,6 +8785,7 @@ a:hover {
   transform: translateY(-6px);
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
@@ -9301,6 +9332,7 @@ margin-top: -10px;
 }
 
 .team-card {
+
   text-align: center;
 }
 
@@ -9392,6 +9424,21 @@ margin-top: -10px;
       align-items: center;
   }
 }
+
+/* =============================
+   RESPONSIVE STYLING
+============================= */
+@media (max-width: 992px) {
+  .team-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
+  }
+}
+
 
 /* =========================
    INNOVATIVE SOLUTIONS
