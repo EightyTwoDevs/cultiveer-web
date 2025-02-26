@@ -8678,8 +8678,22 @@ a:hover {
 ========================= */
 /* About Section Styling */
 .about-section {
-  padding: 80px 0;
+  position: relative;
+  padding: 260px 0 80px; /* Increased top padding */
   background-color: #f6f6f6;
+}
+
+/* Background Design Image */
+.about-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1012.5px; /* Adjust for responsiveness */
+  height: auto;
+  z-index: 1; /* Place behind content */
+  opacity: 0.8;
 }
 
 /* Left Content (Text) */
@@ -8687,26 +8701,24 @@ a:hover {
   text-align: left;
 }
 
-
-
 .section-icon {
-  width: 30px; /* Increase icon size */
+  width: 30px;
   height: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .about-text h2 {
-  font-size: 2rem; /* Increase title size */
-  font-weight: 800; /* Make it bolder */
-  color: #000; /* Ensure it's dark */
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .about-text p {
-  font-size: 1rem; /* Increase paragraph size */
+  font-size: 1rem;
   color: #9a9999;
   font-weight: 600;
   max-width: 550px;
@@ -8722,14 +8734,14 @@ a:hover {
 .about-features li {
   display: flex;
   align-items: center;
-  font-size: 1rem; /* Increase text size */
-  font-weight: 600; /* Make text bolder */
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: -3px;
   color: rgba(35, 135, 0, 0.84);
 }
 
 .about-features img {
-  width: 20px; /* Increase icon size */
+  width: 20px;
   height: 20px;
   margin-right: 12px;
 }
@@ -8740,10 +8752,9 @@ a:hover {
   text-align: center;
 }
 
-
 .about-phone {
   width: 100%;
-  max-width: 450px; /* Increase phone size */
+  max-width: 450px;
   transform: rotate(10deg);
   transition: transform 0.3s ease-in-out;
 }
@@ -8756,16 +8767,25 @@ a:hover {
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .about-phone {
-      max-width: 380px;
+    max-width: 380px;
+  }
+
+  .about-bg {
+    max-width: 900px;
   }
 }
 
 @media (max-width: 768px) {
   .about-phone {
-      max-width: 300px;
-      transform: rotate(0deg); /* Reset rotation on small screens */
+    max-width: 300px;
+    transform: rotate(0deg);
+  }
+
+  .about-bg {
+    max-width: 700px;
   }
 }
+
 
 /* =========================
    PROJECTS SECTION
