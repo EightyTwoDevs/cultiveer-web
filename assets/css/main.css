@@ -9614,7 +9614,7 @@ margin-top: -10px;
 ============================= */
 .blog-home-two {
   background: #f9f9f9;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .blog-icon {
@@ -9627,10 +9627,11 @@ margin-top: -10px;
 .blog-title {
   font-size: 2rem;
   font-weight: 800;
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #000;
   gap: 10px;
 }
@@ -9640,10 +9641,10 @@ margin-top: -10px;
   font-size: 1.1rem;
   color: #a29f9f;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   max-width: 700px;
   line-height: 1.4;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
 }
 
 /* Swiper Container */
@@ -9651,6 +9652,7 @@ margin-top: -10px;
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding: 0 30px; /* Reduced white padding on sides */
 }
 
 /* Swiper Slide */
@@ -9660,7 +9662,7 @@ margin-top: -10px;
   align-items: center;
 }
 
-/* Blog Card - Inside Swiper */
+/* Blog Card */
 .solution-card {
   background: #fff;
   border-radius: 12px;
@@ -9668,22 +9670,32 @@ margin-top: -10px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  padding: 25px;
   width: 100%;
-  max-width: 340px;
+  max-width: 400px; /* Reduced width slightly */
   border: 1px solid rgba(73, 167, 96, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
-/* Blog Image Placeholder */
-.solution-placeholder {
-  background: #ddd;
+/* Image Container */
+.solution-image {
   width: 100%;
-  height: 240px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  height: 480px; /* Adjusted height for better fit */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images fit correctly */
+.solution-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full image is visible */
+  border-radius: 10px;
 }
 
 /* Read More Button */
@@ -9722,27 +9734,28 @@ margin-top: -10px;
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .blog-title {
-    font-size: 1.8rem;
-    text-align: center;
-    justify-content: center;
+      font-size: 1.8rem;
+      text-align: center;
+      justify-content: center;
   }
 
   .blog-subtext {
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto 40px auto;
+      text-align: center;
+      max-width: 90%;
+      margin: 0 auto 40px auto;
   }
 
   .swiper-slide {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
   }
 
   .solution-card {
-    width: 90%;
-    max-width: 100%;
+      width: 90%;
+      max-width: 100%;
   }
 }
+
 
 /* =========================
    CTA Section Jarallax
