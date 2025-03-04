@@ -8504,6 +8504,7 @@ a:hover {
 }
 .logo-box .site-logo {
   height: 50px;
+  width: 50px;
 }
 .main-menu__list {
   list-style: none;
@@ -8689,7 +8690,7 @@ a:hover {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 64%;
   max-width: 1012.5px; /* Adjust for responsiveness */
   height: auto;
   z-index: 1; /* Place behind content */
