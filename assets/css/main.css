@@ -8706,7 +8706,9 @@ a:hover {
   width: 30px;
   height: 30px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  align-items: center;
+  align-content: center;
 }
 
 .about-text h2 {
@@ -8791,10 +8793,10 @@ a:hover {
 /* =========================
    PROJECTS SECTION
 ========================= */
-.projects-section {
-  padding: 40px 0px;
-  background-color: #fdfdfd;
-
+/* Section Styling */
+.solutions-section {
+  padding: 40px 0;
+  background-color: #f6f6f6;
 }
 
 /* Section Title */
@@ -8802,102 +8804,166 @@ a:hover {
   font-size: 2rem;
   font-weight: 700;
   color: #000;
+  text-align: center;
   display: flex;
-  margin-bottom: 20px; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-/* Icon for Section Title */
+/* Section Icon */
 .section-title .section-icon {
   width: 30px;
   height: 30px;
+  margin-bottom: 10px;
 }
 
-/* Row: Centers both tiles side by side */
-.projects-row {
-  display: flex; 
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Aligns vertically */
-  gap:0px; /* Spacing between tiles */
-  flex-wrap: wrap; /* Allows stacking on smaller screens */
-  max-width: 500px; /* Prevents excessive stretching */
-  margin: 0 auto; /* Centers the row */
+/* Category Title */
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #888; /* Light Gray */
+  margin-bottom: 20px;
 }
 
-/* Project Tile Styling */
-.project-tile {
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+
+/* Feature Box Layout */
+.feature-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enables scrolling for small screens */
+  scrollbar-width: none; /* Hide scrollbar */
+  padding-bottom: 50px;
+}
+
+/* Feature Box Styling */
+.feature-box {
   border: 2px solid #49a760;
   border-radius: 12px;
-  padding: 30px;  
-  width: 75%; /* Adjusted for even spacing */
-  max-width: 400px; /* Prevents excessive stretching */
+  padding: 20px;
+  width: 300px;
   background: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  display: flex; /* Align icon and text */
+  flex-direction: column;
+  justify-content: center; /* Centers everything */
+  align-items: center;
+
+  /* Fade-in & slide-up animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
 }
 
-/* Hover Effect */
-.project-tile:hover {
-  transform: translateY(-6px);
+/* Staggered animation delays */
+.feature-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.feature-box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.feature-box:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Feature Box Hover Effect */
+.feature-box:hover {
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Reduced Font Size for Text Inside the Box */
+.feature-box h4 {
+  font-size: 1rem; /* Reduced for a cleaner look */
+  font-weight: 600;
+  color: #044d29; /* Dark green for contrast */
+  text-align: center;
+  margin-top: 10px; /* Adds space below icon */
+}
+
+/* Feature Icons - Centered */
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px; /* Space between icon & text */
+  display: block;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  background-color: #fff;
+  border: 2px solid #49a760;
+  color: #49a760;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+  background-color: #49a760;
+  color: #fff;
+}
 
 /* Responsive Adjustments */
-@media (max-width: 992px) {
-  .projects-row {
-      flex-direction: row; /* Keeps them side by side */
-      justify-content: center;
-  }
-
-  .project-tile {
-      width: 48%; /* Adjust width for medium screens */
-      max-width: 400px;
+@media (max-width: 1024px) {
+  .feature-box {
+    width: 220px;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-row {
-      flex-direction: column; /* Stack vertically on small screens */
-      align-items: center;
+  .feature-container {
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: flex-start;
   }
 
-  .project-tile {
-      width: 90%; /* Increase width for smaller screens */
-      max-width: 400px;
+  .feature-box {
+    min-width: 200px;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide arrows on small screens */
   }
 }
 
-/* Project Card Title */
-.project-tile-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #6b7280;
-  margin-bottom: 12px;
+/* Ensures container is properly sized */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Project Card List */
-.project-tile-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* List Items */
-.project-tile-list li {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000;
-  display: flex;
-  align-items: center;
-}
-
-/* Bullet Styling */
-.project-tile-list li::before {
-  content: "•";
-  color: #4CAF50;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 10px;
+/* 🔥 Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
