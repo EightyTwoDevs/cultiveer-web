@@ -8538,6 +8538,7 @@ a:hover {
 /* =========================
    HERO SECTION
 ========================= */
+/* Hero Section */
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -8547,12 +8548,15 @@ a:hover {
   margin-top: 70px; /* offset for fixed header */
 }
 
+/* Hero Title */
 .hero-title {
   font-size: 6rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: black;
 }
+
+/* Hero Subtitle */
 .hero-subtext {
   font-size: 1.2rem;
   color: #a9a4a4;
@@ -8560,6 +8564,8 @@ a:hover {
   font-weight: bold;
   line-height: 30px;
 }
+
+/* Explore Button */
 .explore-btn {
   display: inline-block;
   border: 2px solid #49a760;
@@ -8570,12 +8576,14 @@ a:hover {
   transition: box-shadow 0.3s, background 0.3s, color 0.3s;
   text-decoration: none;
 }
+
 .explore-btn:hover {
   background: #49a760;
   color: #fff;
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
-/* hero icons */
+
+/* Hero Floating Icons */
 .hero-icon {
   position: absolute;
   width: 80px;
@@ -8596,52 +8604,24 @@ a:hover {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Floating Icons Positions */
+.hero-icon-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.hero-icon-2 { top: 12%; right: 10%; animation-delay: 1s; }
+.hero-icon-3 { top: 50%; left: 30%; animation-delay: 2s; }
+.hero-icon-4 { top: 30%; right: 30%; animation-delay: 2s; }
+.hero-icon-5 { top: 70%; left: 8%; animation-delay: 3s; }
+.hero-icon-6 { top: 55%; right: 25%; animation-delay: 0.5s; }
+.hero-icon-7 { top: 10%; left: 25%; animation-delay: 1.5s; }
+.hero-icon-8 { top: 60%; right: 5%; animation-delay: 2.5s; }
 
-.hero-icon-1 { /*alt crop*/
-  top: 15%;
-  left: 10%;
-  animation-delay: 0s;
-}
-.hero-icon-2 { /*plant*/
-  top: 12%;
-  right: 10%;
-  animation-delay: 1s;
-}
-.hero-icon-3{ /*weed*/
-  top: 50%;
-  left: 30%;
-  animation-delay: 2s;
-}
-.hero-icon-4{ /*scrawcrow*/
-  top: 30%;
-  right: 30%;
-  animation-delay: 2s;
-}
-.hero-icon-5{ /*profit*/
-  top: 70%;
-  left: 8%;
-  animation-delay: 3s;
-}
-.hero-icon-6{ /*npk*/
-  top: 55%;
-  right: 25%;
-  animation-delay: 0.5s;
-}
-.hero-icon-7{  /*yeild*/
-  top: 10%;
-  left: 25%;
-  animation-delay: 1.5s;
-}
-.hero-icon-8{ /*sus agri*/
-  top: 60%;
-  right: 5%;
-  animation-delay: 2.5s;
-}
-@keyframes float{
+/* Floating Animation */
+@keyframes float {
   0%   { transform: translate(0, 0); }
   50%  { transform: translate(20px, 20px); }
   100% { transform: translate(0, 0); }
 }
+
+/* Hero Background Image */
 .hero-background {
   position: absolute;
   bottom: 0;
@@ -8655,23 +8635,135 @@ a:hover {
 
 .hero-bottom-image {
   width: 80%;
-  max-width: 1200px; /* Adjust this based on your layout */
+  max-width: 1200px;
   height: auto;
   display: block;
   opacity: 0.8;
 }
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* Scroll Animation */
 .scroll-animate {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .scroll-animate.scrolled {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==========================
+   Responsive Adjustments
+========================== */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    line-height: 26px;
+  }
+
+  .explore-btn {
+    padding: 12px 24px;
+  }
+
+  .hero-background {
+    width: 90%;
+  }
+
+  .hero-bottom-image {
+    width: 100%;
+  }
+
+  /* Adjusting icon positions for tablets */
+  .hero-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-icon-1 { top: 18%; left: 5%; }
+  .hero-icon-2 { top: 14%; right: 5%; }
+  .hero-icon-3 { top: 48%; left: 25%; }
+  .hero-icon-4 { top: 32%; right: 25%; }
+  .hero-icon-5 { top: 72%; left: 5%; }
+  .hero-icon-6 { top: 57%; right: 15%; }
+  .hero-icon-7 { top: 12%; left: 20%; }
+  .hero-icon-8 { top: 62%; right: 2%; }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px 250px;
+    margin-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .explore-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .hero-background {
+    width: 64%;
+  }
+
+  /* Adjusting icons for smaller screens */
+  .hero-icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-icon-1 { top: 22%; left: 3%; }
+  .hero-icon-2 { top: 15%; right: 3%; }
+  .hero-icon-3 { top: 50%; left: 20%; }
+  .hero-icon-4 { top: 35%; right: 20%; }
+  .hero-icon-5 { top: 75%; left: 3%; }
+  .hero-icon-6 { top: 60%; right: 10%; }
+  .hero-icon-7 { top: 15%; left: 15%; }
+  .hero-icon-8 { top: 65%; right: 0%; }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.8rem;
+    line-height: 24px;
+  }
+
+  .explore-btn {
+    font-size: 0.8rem;
+    padding: 8px 18px;
+  }
+
+  .hero-icon {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-icon-1 { top: 25%; left: 2%; }
+  .hero-icon-2 { top: 18%; right: 2%; }
+  .hero-icon-3 { top: 52%; left: 15%; }
+  .hero-icon-4 { top: 38%; right: 15%; }
+  .hero-icon-5 { top: 78%; left: 2%; }
+  .hero-icon-6 { top: 63%; right: 5%; }
+  .hero-icon-7 { top: 18%; left: 10%; }
+  .hero-icon-8 { top: 68%; right: 0%; }
 }
 
 /* =========================
@@ -8680,8 +8772,9 @@ a:hover {
 /* About Section Styling */
 .about-section {
   position: relative;
-  padding: 260px 0 80px; /* Increased top padding */
+  padding: 200px 0 80px; /* Adjusted for smaller screens */
   background-color: #f6f6f6;
+  text-align: center; /* Center content for smaller screens */
 }
 
 /* Background Design Image */
@@ -8693,22 +8786,21 @@ a:hover {
   width: 64%;
   max-width: 1012.5px; /* Adjust for responsiveness */
   height: auto;
-  z-index: 1; /* Place behind content */
+  z-index: 1;
   opacity: 0.8;
 }
 
 /* Left Content (Text) */
 .about-text {
   text-align: left;
+  padding: 20px;
 }
 
 .section-icon {
   width: 30px;
   height: 30px;
   margin-bottom: 20px;
-  /* margin-left: 20px; */
   align-items: center;
-  align-content: center;
 }
 
 .about-text h2 {
@@ -8767,8 +8859,16 @@ a:hover {
   transform: rotate(0deg) scale(1.05);
 }
 
-/* Responsive Adjustments */
+/* ==========================
+   Responsive Adjustments
+========================== */
+
+/* Tablets */
 @media (max-width: 992px) {
+  .about-section {
+    padding: 150px 0 60px;
+  }
+
   .about-phone {
     max-width: 380px;
   }
@@ -8776,11 +8876,53 @@ a:hover {
   .about-bg {
     max-width: 900px;
   }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-features li {
+    font-size: 0.95rem;
+  }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
+  .about-section {
+    padding: 120px 20px 50px;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.7rem;
+    justify-content: center;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .about-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-features li {
+    font-size: 0.9rem;
+  }
+
   .about-phone {
-    max-width: 300px;
+    max-width: 280px;
     transform: rotate(0deg);
   }
 
@@ -8789,6 +8931,33 @@ a:hover {
   }
 }
 
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 100px 15px 40px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.85rem;
+  }
+
+  .about-features li {
+    font-size: 0.85rem;
+  }
+
+  .about-phone {
+    max-width: 240px;
+  }
+
+  .about-bg {
+    width: 80%;
+    max-width: 500px;
+  }
+}
 
 /* =========================
    PROJECTS SECTION
@@ -9149,10 +9318,12 @@ a:hover {
 /* =============================
    SMART POT SECTION
 ============================= */
+/* Smart Pot Section */
 .smart-pot-section {
   position: relative;
   padding: 100px 0;
   background-color: #f9f9f9;
+  text-align: center;
 }
 
 /* Smart Pot Title */
@@ -9163,126 +9334,160 @@ a:hover {
   align-items: center;
   gap: 10px;
   color: #000;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 /* Smart Pot Description */
 .smart-pot-desc {
   font-size: 1rem;
-  color: #a29f9f;
-  max-width: 450px;
+  color: #6d6b6b;
+  max-width: 550px;
   font-weight: bold;
   line-height: 26px;
+  margin: 0 auto 30px;
 }
 
 /* Image Wrapper */
 .smart-pot-image-wrapper {
   position: relative;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Image Styling */
 .smart-pot-img {
-  max-width: 550px;
-  width: 90%;
+  max-width: 100%;
+  width: 320px; /* Adjusted size for better visibility */
   height: auto;
 }
 
-/* Prototype Label */
+/* Prototype Label - Now positioned correctly below the image */
 .smart-pot-proto-label {
-  position: absolute;
-  top: 100%;
-  right: 40%;
+  display: block;
   font-size: 0.9rem;
-  color: #999;
+  color: #777;
+  margin-top: 10px; /* Added space below the image */
+  text-align: center;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-  .row.align-items-center {
-    flex-direction: column;
-    text-align: center;
+  .smart-pot-section {
+    padding: 80px 20px;
   }
 
   .smart-pot-title {
-    justify-content: center;
+    font-size: 1.7rem;
   }
 
   .smart-pot-desc {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .smart-pot-image-wrapper {
-    text-align: center;
+    font-size: 0.95rem;
+    line-height: 24px;
   }
 
   .smart-pot-img {
-    max-width: 400px;
+    width: 280px;
   }
 
   .smart-pot-proto-label {
-    top: 5%;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 0.85rem;
+    margin-top: 8px;
   }
 }
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .smart-pot-section {
+    padding: 60px 15px;
+  }
+
+  .smart-pot-title {
+    font-size: 1.5rem;
+  }
+
+  .smart-pot-desc {
+    font-size: 0.9rem;
+  }
+
+  .smart-pot-img {
+    width: 250px;
+  }
+
+  .smart-pot-proto-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .smart-pot-title {
+    font-size: 1.3rem;
+  }
+
+  .smart-pot-desc {
+    font-size: 0.85rem;
+  }
+
+  .smart-pot-img {
+    width: 220px;
+  }
+
+  .smart-pot-proto-label {
+    font-size: 0.75rem;
+    margin-top: 5px;
+  }
+}
+
 
 /* =============================
    PROJECT UPDATES SECTION
 ============================= */
+/* Project Updates Section */
 .project-updates-section {
   background: #f9f9f9;
-  padding: 100px 0;
+  padding: 80px 0;
+  text-align: center;
 }
-.updates-icon{
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
+
 /* Title Styling */
 .updates-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
   color: #000;
+}
+
+/* Reduce Icon Size */
+.updates-icon {
+  width: 24px; /* Adjusted from 30px */
+  height: 24px;
 }
 
 /* Subtitle Styling */
 .updates-subtext {
-  color: #a29f9f;
+  color: #6d6b6b;
   font-weight: bold;
   font-size: 1rem;
-  margin-bottom: 40px;
+  margin: 0 auto 30px;
   max-width: 600px;
   line-height: 1.6;
+  text-align: center;
 }
 
-/* Video Placeholder */
+/* Video Wrapper */
 .video-wrapper {
   position: relative;
   width: 100%;
   max-width: 900px;
-  height: 400px;
-  background-color: #f2f2f2;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Video Container */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px; /* Adjust based on your design */
-  height: 400px; /* Ensures it maintains a box shape */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Makes video responsive */
   background-color: #f2f2f2;
   margin: 0 auto;
   display: flex;
@@ -9295,132 +9500,293 @@ a:hover {
 
 /* Video iframe Styling */
 .video-wrapper iframe {
-  width: 100%;  /* Ensure it stretches */
-  height: 100%; /* Ensure it fills the container */
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 12px;
 }
 
-.video-placeholder {
-  font-size: 1.2rem;
-  color: #999;
-  font-weight: 600;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 992px) {
+  .project-updates-section {
+    padding: 70px 20px;
+  }
+
   .updates-title {
     font-size: 1.8rem;
   }
 
+  .updates-icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .updates-subtext {
-    font-size: 1rem;
-    text-align: center;
-    max-width: 100%;
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .project-updates-section {
+    padding: 60px 15px;
+  }
+
+  .updates-title {
+    font-size: 1.5rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .updates-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .updates-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
   }
 
   .video-wrapper {
-    height: 300px;
+    max-width: 100%;
   }
 }
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .project-updates-section {
+    padding: 50px 10px;
+  }
+
+  .updates-title {
+    font-size: 1.3rem;
+  }
+
+  .updates-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .updates-subtext {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+}
+
+
 
 /* =============================
 IOT INNOVATION SECTION
 ============================= */
+/* IoT Innovation Section */
 .iot-innovation-section {
-background-color: #f9f9f9;
-padding: 100px 0;
+  background-color: #f9f9f9;
+  padding: 100px 0;
 }
 
 /* IoT Title */
 .iot-title {
-display: flex;
-align-items: center;
-font-size: 2rem;
-font-weight: 700;
-margin-bottom: 15px;
-color: #000;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+  gap: 8px;
+  text-align: left;
 }
 
 /* IoT Icon */
 .iot-icon {
-width: 30px;
-height: 30px;
-margin-right: 10px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Subtitle */
 .iot-subtext {
-font-size: 1rem;
-color: #a29f9f;
-max-width: 600px;
-margin-bottom: 30px;
-font-weight: bold;
-line-height: 1.5;
+  font-size: 1rem;
+  color: #6d6b6b;
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
 }
 
 /* Features List */
 .iot-features-list {
-list-style: none;
-padding: 0;
-margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps items left-aligned */
 }
 
+/* Feature Item */
 .iot-features-list li {
-display: flex;
-align-items: center;
-font-size: 1rem;
-font-weight: 600;
-margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
 }
 
 /* Feature Icons */
 .iot-icon-list {
-width: 20px;
-margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
 }
 
 /* Counter Section */
 .iot-counter-wrap {
-margin-top: 50px;
-
+  margin-top: 50px;
+  text-align: left; /* Keep left-aligned */
 }
 
+/* Counter Number */
 .iot-counter-wrap h3 {
-display: flex;
-align-items: center;
-font-size: 2.5rem;
-font-weight: 700;
-color: #49a760;
-margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #49a760;
+  gap: 5px;
 }
 
+/* Counter Label */
 .iot-counter-wrap p {
-color: #a29f9f;
-font-size: 1rem;
-font-weight: bold;
-margin-top: -10px;
+  color: #6d6b6b;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: -5px;
 }
 
-/* Odometer animations (the library handles the digits) */
+/* Odometer Number */
 .odometer {
   display: inline-block;
   font-size: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .iot-innovation-section {
+    padding: 80px 20px;
+  }
+
+  .iot-title {
+    font-size: 1.8rem;
+  }
+
+  .iot-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .iot-subtext {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+
+  .iot-counter-wrap h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .iot-innovation-section {
+    padding: 60px 15px;
+  }
+
+  .iot-title {
+    font-size: 1.6rem;
+    gap: 5px;
+  }
+
+  .iot-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .iot-subtext {
+    font-size: 0.9rem;
+  }
+
+  .iot-features-list {
+    align-items: flex-start; /* Keep it left-aligned */
+  }
+
+  .iot-features-list li {
+    font-size: 0.9rem;
+  }
+
+  .iot-icon-list {
+    width: 22px;
+    height: 22px;
+  }
+
+  .iot-counter-wrap {
+    text-align: left;
+  }
+
+  .iot-counter-wrap h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .iot-innovation-section {
+    padding: 50px 10px;
+  }
+
+  .iot-title {
+    font-size: 1.4rem;
+  }
+
+  .iot-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .iot-subtext {
+    font-size: 0.85rem;
+  }
+
+  .iot-features-list li {
+    font-size: 0.85rem;
+  }
+
+  .iot-counter-wrap h3 {
+    font-size: 1.6rem;
+  }
+
+  .odometer {
+    font-size: 1.5rem;
+  }
 }
 
 
 /* =============================
    TEAM SECTION STYLING
 ============================= */
+/* Team Section */
 .team-one {
   background-color: #fff;
   padding: 80px 0;
 }
 
+/* Container Positioning */
 .team-one .container {
   position: relative;
 }
 
+/* Team Icon */
 .team-icon {
   width: 28px;
   height: 28px;
@@ -9432,6 +9798,7 @@ margin-top: -10px;
   text-align: left;
 }
 
+/* Section Title */
 .team-one__content h2 {
   font-size: 2rem;
   font-weight: 800;
@@ -9439,25 +9806,30 @@ margin-top: -10px;
   margin-bottom: 20px;
 }
 
+/* Section Summary */
 .team-one__summary {
   font-size: 1rem;
-  color: #a29f9f;
+  color: #6d6b6b;
   line-height: 1.6;
   font-weight: bold;
   max-width: 500px;
 }
 
-/* Team Cards Styling */
+/* Team Cards Layout */
 .team-cards {
   display: flex;
   justify-content: space-between;
 }
 
+/* Individual Team Card */
 .team-card {
-
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Team Card Image */
 .team-card img {
   width: 100%;
   max-width: 230px;
@@ -9467,21 +9839,28 @@ margin-top: -10px;
   transition: transform 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .team-card img:hover {
   transform: scale(1.05);
 }
 
+/* Team Member Name */
 .team-card h3 {
   font-size: 1.2rem;
   font-weight: bold;
   color: #255946;
   margin-top: 15px;
+  text-align: center;
+  width: 100%;
 }
 
+/* Team Member Role */
 .team-card p {
   font-size: 0.95rem;
   color: #666;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 /* Swiper Styles */
@@ -9489,6 +9868,7 @@ margin-top: -10px;
   overflow: hidden;
 }
 
+/* Swiper Pagination */
 .swiper-pagination {
   position: relative;
   margin-top: 20px;
@@ -9517,49 +9897,104 @@ margin-top: -10px;
   transition: all 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background-color: #255946;
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .team-cards {
-      justify-content: center;
-      flex-wrap: wrap;
-  }
-
-  .team-card {
-      margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .team-one__content {
-      text-align: center;
-      margin-bottom: 40px;
-  }
-
-  .team-cards {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
 /* =============================
    RESPONSIVE STYLING
 ============================= */
+
+/* Tablet Screens */
 @media (max-width: 992px) {
-  .team-carousel {
+  .team-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .team-card {
+    margin-bottom: 20px;
+  }
+
+  .team-one__content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .team-one__content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .team-one__content h2 {
+    font-size: 1.6rem;
+  }
+
+  .team-one__summary {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .team-cards {
     flex-direction: column;
     align-items: center;
   }
 
   .team-card {
-    width: 90%;
+    width: 100%;
+  }
+
+  .team-card img {
+    max-width: 200px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
   }
 }
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .team-one {
+    padding: 60px 15px;
+  }
+
+  .team-one__content h2 {
+    font-size: 1.4rem;
+  }
+
+  .team-one__summary {
+    font-size: 0.85rem;
+  }
+
+  .team-card img {
+    max-width: 180px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+}
+
 
 
 /* =========================
