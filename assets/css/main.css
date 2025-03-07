@@ -10000,30 +10000,44 @@ IOT INNOVATION SECTION
 /* =========================
    INNOVATIVE SOLUTIONS
 ========================= */
+/* Innovative Solutions Section */
 .innovative-solutions-section {
   background: #f5f5f5;
   padding: 80px 0;
 }
+
+/* Section Title */
 .innovative-title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
   text-align: left;
   color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+/* Icon in Title */
 .innovative-icon {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
 }
+
+/* Swiper Slider */
+.thm-swiper__slider {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
 /* Solution Card */
 .solution-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
-  padding: 0px; /* Remove extra padding */
-  padding-top: 0px;
+  padding: 0;
   transition: transform 0.3s;
   overflow: hidden;
   display: flex;
@@ -10031,7 +10045,7 @@ IOT INNOVATION SECTION
   align-items: center;
   width: 100%;
   height: auto;
-  aspect-ratio: 1080 / 1350; /* Maintain correct aspect ratio */
+  aspect-ratio: 1080 / 1350; /* Maintains correct aspect ratio */
 }
 
 /* Solution Image */
@@ -10044,33 +10058,98 @@ IOT INNOVATION SECTION
   display: block;
 }
 
+/* Hover Effect */
 .solution-card:hover .solution-image {
   transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
+/* Swiper Pagination */
+.innovative-pagination {
+  margin-top: 20px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablet Screens */
 @media (max-width: 992px) {
+  .innovative-solutions-section {
+    padding: 70px 20px;
+  }
+
+  .innovative-title {
+    font-size: 1.8rem;
+  }
+
   .solution-card {
     aspect-ratio: 1080 / 1350;
+  }
+
+  .solution-image {
+    border-radius: 10px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .innovative-solutions-section {
+    padding: 60px 15px;
+  }
+
+  .innovative-title {
+    font-size: 1.6rem;
+  }
+
+  .solution-card {
+    aspect-ratio: 1 / 1.2;
+  }
+
+  .solution-image {
+    border-radius: 8px;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .innovative-solutions-section {
+    padding: 50px 10px;
+  }
+
+  .innovative-title {
+    font-size: 1.4rem;
+  }
+
+  .solution-card {
+    aspect-ratio: 1 / 1.3;
+  }
+
+  .solution-image {
+    border-radius: 6px;
   }
 }
 
 /* =========================
    CTA: Empower Farmers ...
 ========================= */
+/* Empower Farmers Section */
 .empower-farmers-section {
   background: #fff;
   padding: 60px 0;
   text-align: center;
 }
+
+/* Title Styling */
 .empower-title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0px;
   color: #000;
 }
+
+/* Subtitle Styling */
 .empower-subtext {
-  color: #a29f9f;
+  color: #6d6b6b;
   font-size: 1.1rem;
   font-weight: bold;
   line-height: 1.6;
@@ -10080,6 +10159,8 @@ IOT INNOVATION SECTION
   margin-right: auto;
   margin-top: 50px;
 }
+
+/* Call-to-Action Button */
 .empower-btn {
   border: 2px solid #49a760;
   color: #49a760;
@@ -10091,34 +10172,126 @@ IOT INNOVATION SECTION
   margin-bottom: 30px;
   display: inline-block;
 }
+
+/* Button Hover Effect */
 .empower-btn:hover {
   background: #49a760;
   color: #fff;
 }
+
+/* Logo Container - Keeps Logos on Opposite Sides */
 .empower-logos {
   margin-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between; /* Places logos on opposite sides */
+  gap: 20px;
+  max-width: 500px; /* Restricts width */
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Partner Logos */
 .partner-logo {
   max-width: 200px;
   height: auto;
   transition: transform 0.3s;
 }
+
+/* Logo Hover Effect */
 .partner-logo:hover {
   transform: scale(1.05);
 }
 
 /* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+  .empower-title {
+    font-size: 1.8rem;
+  }
+
+  .empower-subtext {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .partner-logo {
+    max-width: 180px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .empower-farmers-section {
+    padding: 50px 15px;
+  }
+
+  .empower-title {
+    font-size: 1.6rem;
+  }
+
+  .empower-subtext {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  /* Keep Logos on Opposite Sides but Reduce Space */
+  .empower-logos {
+    max-width: 400px;
+    gap: 10px;
+  }
+
+  .partner-logo {
+    max-width: 140px;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .empower-farmers-section {
+    padding: 40px 10px;
+  }
+
+  .empower-title {
+    font-size: 1.4rem;
+  }
+
+  .empower-subtext {
+    font-size: 0.85rem;
+    margin-top: 30px;
+  }
+
+  .empower-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Stack Logos on Small Screens */
+  .empower-logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .partner-logo {
+    max-width: 120px;
+  }
+}
+
+
+/* =============================
    BLOG SECTION STYLING
 ============================= */
+/* Latest Updates Section */
 .blog-home-two {
   background: #f9f9f9;
   padding: 80px 0;
 }
 
+/* Blog Section Icon */
 .blog-icon {
   width: 30px;
   height: 30px;
@@ -10141,12 +10314,12 @@ IOT INNOVATION SECTION
 /* Section Subtitle */
 .blog-subtext {
   font-size: 1.1rem;
-  color: #a29f9f;
+  color: #6d6b6b;
   font-weight: bold;
   text-align: center;
   max-width: 700px;
-  line-height: 1.4;
-  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  margin: 0 auto 40px;
 }
 
 /* Swiper Container */
@@ -10154,7 +10327,7 @@ IOT INNOVATION SECTION
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 0 30px; /* Reduced white padding on sides */
+  padding: 0 30px; /* Reduced extra white space on sides */
 }
 
 /* Swiper Slide */
@@ -10173,7 +10346,7 @@ IOT INNOVATION SECTION
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 100%;
-  max-width: 400px; /* Reduced width slightly */
+  max-width: 380px; /* Adjusted width for better mobile fit */
   border: 1px solid rgba(73, 167, 96, 0.4);
   display: flex;
   flex-direction: column;
@@ -10184,7 +10357,7 @@ IOT INNOVATION SECTION
 /* Image Container */
 .solution-image {
   width: 100%;
-  height: 480px; /* Adjusted height for better fit */
+  height: 320px; /* Adjusted for better fit */
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -10192,11 +10365,11 @@ IOT INNOVATION SECTION
   align-items: center;
 }
 
-/* Ensure images fit correctly */
+/* Blog Card Images */
 .solution-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures full image is visible */
+  object-fit: cover; /* Prevents distortion */
   border-radius: 10px;
 }
 
@@ -10214,7 +10387,7 @@ IOT INNOVATION SECTION
   margin-top: 15px;
 }
 
-/* Hover Effects */
+/* Button Hover Effect */
 .solution-readmore:hover {
   background: #49a760;
   color: #fff;
@@ -10233,28 +10406,95 @@ IOT INNOVATION SECTION
   margin-top: 20px;
 }
 
-/* Responsive Adjustments */
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablet Screens */
 @media (max-width: 992px) {
   .blog-title {
-      font-size: 1.8rem;
-      text-align: center;
-      justify-content: center;
+    font-size: 1.8rem;
+    text-align: center;
+    justify-content: center;
   }
 
   .blog-subtext {
-      text-align: center;
-      max-width: 90%;
-      margin: 0 auto 40px auto;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 40px;
   }
 
   .swiper-slide {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   .solution-card {
-      width: 90%;
-      max-width: 100%;
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .blog-home-two {
+    padding: 60px 15px;
+  }
+
+  .blog-title {
+    font-size: 1.6rem;
+  }
+
+  .blog-subtext {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .solution-card {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .solution-image {
+    height: 250px;
+  }
+
+  .solution-readmore {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .blog-home-two {
+    padding: 50px 10px;
+  }
+
+  .blog-title {
+    font-size: 1.4rem;
+  }
+
+  .blog-subtext {
+    font-size: 0.85rem;
+  }
+
+  .solution-card {
+    padding: 15px;
+  }
+
+  .solution-image {
+    height: 220px;
+  }
+
+  .solution-readmore {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }
 
@@ -10262,22 +10502,28 @@ IOT INNOVATION SECTION
 /* =========================
    CTA Section Jarallax
 ========================= */
+/* Call to Action Section */
 .call-to-action {
   position: relative;
   padding: 60px 0;
   background: #f0f0f0;
   text-align: center;
 }
+
+/* Call to Action Heading */
 .call-to-action h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 12px;
-  align-items: center;
-  align-content: center;
-  text-align: center;
   color: #000;
-  padding-left: 150px;
+  text-align: center;
+  padding: 0 20px; /* Adjusted padding for proper alignment */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Call to Action Button */
 .call-to-action .cta-btn {
   border: 2px solid #49a760;
   color: #49a760;
@@ -10286,20 +10532,67 @@ IOT INNOVATION SECTION
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s;
-  align-content: center;
+  display: inline-block;
+  margin-top: 15px;
 }
-.cta-btn {
-  border: 2px solid #49a760;
-  color: #49a760;
-  background: transparent;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
+
+/* Button Hover Effect */
 .cta-btn:hover {
   background: #49a760;
   color: #fff;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+  .call-to-action {
+    padding: 50px 20px;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.8rem;
+    max-width: 90%;
+  }
+
+  .cta-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 40px 15px;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .call-to-action {
+    padding: 40px 10px;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
 }
 
 /* =========================
