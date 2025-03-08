@@ -2298,8 +2298,8 @@ h6 {
 }
 
 .main-menu {
-  -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  /* -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1); */
   background-color: rgba(255, 255, 255, 0);
   position: relative;
   z-index: 91;
@@ -8494,9 +8494,40 @@ a:hover {
 ========================= */
 .main-header {
   width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  /* background: #fff; */
+  background: transparent;
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.05); */
 }
+
+/* When scrolling, apply white background */
+.main-header.scrolled {
+  background: #fff; /* White background when scrolling */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Default menu text color for transparency */
+.main-menu__list li a {
+  color: white; /* White text when transparent */
+  transition: color 0.3s;
+}
+
+/* Change text color when navbar is scrolled */
+.main-header.scrolled .main-menu__list li a {
+  color: #333; /* Dark text when scrolled */
+}
+
+/* Adjust login button for visibility */
+.main-header .login-btn {
+  border-color: #49a760;
+  color: #49a760;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.main-header.scrolled .login-btn {
+  border-color: #49a760;
+  color: #49a760;
+}
+
 .main-menu .container {
   display: flex;
   align-items: center;
@@ -8545,7 +8576,8 @@ a:hover {
   padding: 120px 0 400px;
   background-color: white;
   text-align: center;
-  margin-top: 70px; /* offset for fixed header */
+  margin-top: 0x; /* offset for fixed header */
+  
 }
 
 /* Hero Title */
@@ -8554,12 +8586,13 @@ a:hover {
   font-weight: 700;
   margin-bottom: 10px;
   color: black;
+  margin-top: 140px;
 }
 
 /* Hero Subtitle */
 .hero-subtext {
   font-size: 1.2rem;
-  color: #a9a4a4;
+  color: #000000;
   margin-bottom: 40px;
   font-weight: bold;
   line-height: 30px;
@@ -8568,9 +8601,9 @@ a:hover {
 /* Explore Button */
 .explore-btn {
   display: inline-block;
-  border: 2px solid #49a760;
+  border: 2px solid #2d7a11;
   background: transparent;
-  color: #49a760;
+  color: #2d7a11;
   padding: 14px 28px;
   border-radius: 8px;
   transition: box-shadow 0.3s, background 0.3s, color 0.3s;
@@ -8578,7 +8611,7 @@ a:hover {
 }
 
 .explore-btn:hover {
-  background: #49a760;
+  background: #2d7a11;
   color: #fff;
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
@@ -8592,6 +8625,7 @@ a:hover {
   border-radius: 16px;
   overflow: hidden;
   animation: float 6s ease-in-out infinite;
+  z-index: 3;/* so it sits on top of the gradient */	
 }
 
 .hero-icon-big {
@@ -8608,11 +8642,13 @@ a:hover {
 .hero-icon-1 { top: 15%; left: 10%; animation-delay: 0s; }
 .hero-icon-2 { top: 12%; right: 10%; animation-delay: 1s; }
 .hero-icon-3 { top: 50%; left: 30%; animation-delay: 2s; }
-.hero-icon-4 { top: 30%; right: 30%; animation-delay: 2s; }
+.hero-icon-4 { top: 30%; right: 20%; animation-delay: 2s; }
 .hero-icon-5 { top: 70%; left: 8%; animation-delay: 3s; }
 .hero-icon-6 { top: 55%; right: 25%; animation-delay: 0.5s; }
 .hero-icon-7 { top: 10%; left: 25%; animation-delay: 1.5s; }
 .hero-icon-8 { top: 60%; right: 5%; animation-delay: 2.5s; }
+.hero-icon-9 { top: 41%; right: 87%; animation-delay: 2.5s; }
+
 
 /* Floating Animation */
 @keyframes float {
@@ -8633,8 +8669,262 @@ a:hover {
   z-index: 1;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+}
+
+
+/* Hero background gradient */
+.hero-gradient-bg {
+  position: absolute; /* so it sits behind your hero content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* put it behind the hero text which is a higher z-index */
+}
+
+
+/* Gradient CSS */
+:root {
+  --color-bg1: rgb(148,200,130);
+  --color-bg2: rgb(83,180,49);
+  --color1: 148,200,130;
+  --color2: 126,162,93;
+  --color3: 148,200,130;
+  --color4: 83,180,49;
+  --color5: 83,180,49;
+  --color6: 63,171,25;
+
+  --color-interactive: 83,180,49;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+
+/* .gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+
+  svg {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 0;
+    height: 0;
+  }
+
+} */
+
+.gradients-container {
+  filter: url(#goo) blur(40px) ;
+  width: 100%;
+  height: 100%;
+
+}
+
+.g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+
+  /* opacity: 1; */
+  opacity: 0.7;
+
+}
+
+.g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+
+  /* opacity: 1; */
+  opacity: 0.7;
+}
+
+.g3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px);
+
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+
+  /* opacity: 1; */
+  opacity: 0.7;
+}
+
+.g4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+
+  /* opacity: 0.7; */
+  opacity: 0.5;
+}
+
+.g5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  /* opacity: 1; */
+  opacity: 0.7;
+}
+
+.g6 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color6), 0.8) 0, rgba(var(--color6), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  /* opacity: 1; */
+  opacity: 0.3;
+}
+
+.g7 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color6), 0.8) 0, rgba(var(--color6), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  /* opacity: 1; */
+  opacity: 0.3;
+}
+
+.g8 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--colo6r), 0.8) 0, rgba(var(--color6), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+
+  /* opacity: 1; */
+  opacity: 0.3;
+}
+
+
+
+.interactive {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+
+  /* opacity: 0.7; */
+  opacity: 0.6;
+}
+
+
+
 .hero-bottom-image {
-  width: 80%;
+  /* 80; */
+  width:  80%;
   max-width: 1200px;
   height: auto;
   display: block;

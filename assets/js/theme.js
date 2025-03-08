@@ -447,3 +447,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".main-header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled"); // Apply white background when scrolling
+    } else {
+      header.classList.remove("scrolled"); // Keep it transparent at the top
+    }
+  });
+});
+
+
